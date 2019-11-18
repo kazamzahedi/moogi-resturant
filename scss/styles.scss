@@ -1,7 +1,60 @@
 body{
 }
 
-header {
+.center {
+  margin:0px auto;
+  width: 1200px;
+}
+/*                                            header style   */
+.header {
   border: 1px solid #000;
+  min-height: 500px;
   font-size: 20px;
+
+  &__wrapper{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+
+  }
+  &__logo {
+    grid-column: 1/3;
+    border: 1px solid #000;
+  }
+  &__menu {
+    grid-column: 3/11;
+    border: 1px solid #000;
+  }
+  &__social {
+    grid-column: 11/13;
+    border: 1px solid #000;
+  }
+  &__title {
+    grid-column: 4/10;
+    border: 1px solid #000;
+
+  }
+}
+/*                                            main style   */
+main {
+  border: 1px solid #000;
+}
+
+.agencies {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 500px;
+
+  &__info {
+    border: 1px solid #000;
+  }
+  &__img {
+    border: 1px solid #000;
+
+  }
+}
+
+/*                                            footer style   */
+footer {
+  border: 1px solid #000;
 }
