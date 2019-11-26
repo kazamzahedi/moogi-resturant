@@ -2,29 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="John Doe">
     <title>MOOGI RESTURATN</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/javascript.js" defer></script>
 </head>
 <body>
     <header class="header"><!--        HEADER           -->
       <div class="center header__wrapper">
-        <h1 class="header__logo">logo</h1>
-        <nav class="header__menu">
+        <a class="header__logo" href="#"><img src="img/logo.png"/></a>
+
+        <nav id="myLinks" class="header__menu">
           <ul>
-            <li>Home</li>
-            <li>Agencies</li>
-            <li>Menu</li>
-            <li>Gallery</li>
-            <li>Contact us</li>
-            <li>About us</li>
-          </ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Agencies</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">About us</a></li>
+            </ul>
         </nav>
+        <a href="javascript:void(0);" class="header__icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+
         <div class="header__social">
-          <h4>Facebook</h4>
-          <h4>Instagram</h4>
+          <a href="#"><i class="fa fa-facebook-square fa-3x fb" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
         </div>
+
         <div class="header__title">
           <p>Wellcom to</p>
           <h2>Moogi resturant</h2>
@@ -35,34 +48,66 @@
     <main>
       <div class="center">
         <section class="agencies"><!--               section-one               -->
-          <div class="agencies__info">
-            <h3>title</h3>
-            <p>some text to this title</p>
-            <button>Read more</button>
-          </div>
-          <div class="agencies__img">
-            <img src="lucarno-img.jpg" />
-          </div>
+          <a href="#" class="agencies__info">
+            <div class="agencies-background">
+              <h3>Our agency at Lucarno</h3>
+              <p>For more information you can contact us at phone number
+                below or see our menus to continue reading</p>
+              <button>Read more</button>
+            </div>
+          </a>
+          <a href="#" class="agencies__img">
+            <img src="img/image_1.jpg" />
+          </a>
 
-          <div class="agencies__info">
-            <h3>title</h3>
-            <p>some text to this title</p>
-            <button>Read more</button>
-          </div>
-          <div class="agencies__img">
-            <img src="lucarno-img.jpg" />
-          </div>
+          <a href="#" class="agencies__img">
+            <img src="img/image_1.jpg" />
+          </a>
+          <a href="#" class="agencies__info">
+            <div class="agencies-background">
+              <h3>Our agency at Bellinzona</h3>
+              <p>For more information you can contact us at phone number
+                below or see our menus to continue reading</p>
+              <button>Read more</button>
+            </div>
+          </a>
         </section><!--               end of section-one               -->
 
-        <section><!--               section-tow               -->
+        <section class="menus"><!--                  section-tow               -->
+          <div>
+            <h3>Doner Kebab</h3>
+            <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
+            <img src="img/menus_1.jpg" />
+          </div>
+          <div>
+            <img src="img/menus_1.jpg" />
+            <h3>Doner Kebab</h3>
+            <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
+          </div>
+          <div>
+            <h3>Doner Kebab</h3>
+            <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
+            <img src="img/menus_1.jpg" />
+          </div>
         </section><!--               end of section-tow               -->
 
-        <section><!--               section-three               -->
+        <section class="contact"><!--               section-three               -->
         </section><!--               end of section-three               -->
       </div>
     </main><!--        END OF MAIN           -->
     <footer>
-        <div class="center">footer</div>
+        <div class="center footer__wrapper">
+          <div>
+            <h4>Social</h4>
+            <a href="#"><i class="fa fa-facebook-square fa-3x fb" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+          </div>
+          <div>2</div>
+          <div>
+            <h4>Kontakt</h4>
+            <address>Moogi Kebab Bokhor halesho bebar </br>Keltenstrasse 3 </br>Bern 3018</address>
+          </div>
+        </div>
     </footer>
 </body>
 </html>
