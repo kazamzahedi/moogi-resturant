@@ -46,17 +46,9 @@ main {
 
 .agencies {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
   &__info {
     background-image: url("../img/image_back_1.jpg");
     background-repeat: no-repeat;
-  }
-  &-background {
-    background-color: $white;
-    opacity: 0.8;
-    height: 100%;
-    padding: 70px;
   }
   &__img {
     img{ width: 100%;}
@@ -88,8 +80,11 @@ footer {
 
 /*----------------------------------------MEDIA SCREEN mobile----------------------------*/
 @media (max-width: 599px) {
+  header, main, footer {
+    padding: 0 10px;
+  }
   #myLinks {
-    display: none;
+    //display: none;
   }
   .header {
     background-size: cover;
@@ -105,8 +100,27 @@ footer {
     }
     &__menu {
       grid-column: 1/13;
-      border: 1px solid #000;
       grid-row: 2/3;
+      ul {
+        padding: 0px;
+      }
+      li {
+        padding: 5px;
+      }
+      li:hover {
+        background-color: $light-grey;
+        opacity: 0.1;
+      }
+      a {
+        display: block;
+      }
+      li a:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+      i {
+        padding-right: 20px;
+      }
     }
     &__social {
       grid-column: 5/10;
@@ -124,14 +138,43 @@ footer {
       right:0px;
       top:0px;
       border: 1px solid #000;
-      padding: 20px;
-      margin:10px;
+      padding: 5px 20px;
+      opacity: 0.8;
+      color: $blue;
+      font-size: 46px;
     }
   }
 //-------------------------------------------AGENCIES--------
   .agencies {
-    margin-top: -120px;
+    margin-top: -70px;
+    display: grid;
+    &__img {
+      display: none;
+    }
+    &__info {
+      background-image: url(../img/image_1.jpg);
+      background-size: cover;
+      width: 100%;
+      padding: 20px;
+      color: $white;
+      text-align: center;
+      margin-bottom: 10px;
+      min-height: 250px;
+    }
+    &__info2 {
+      background-image: url(../img/image_2.jpg);
+    }
   }
+  .menus {
+    &__part {
+      width: 100%;
+    }
+    img {
+      width: 70%;
+    }
+
+  }
+
 }
 
 /*-----------------------------------media screen tablet------------------------*/
@@ -199,7 +242,14 @@ footer {
 //---------------------------------------AGENCIES------------
   .agencies {
     margin-top: -120px;
+    grid-template-columns: repeat(2, 1fr);
     box-shadow: 0 0 20px $black;
+    &-background {
+      background-color: $white;
+      opacity: 0.8;
+      height: 100%;
+      padding: 70px;
+    }
     &__info {
       text-align: center;
     }
