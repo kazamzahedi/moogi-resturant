@@ -15,14 +15,20 @@ $light-grey: #bdbdbd;
 $white: #fff;
 $black: #000;
 
-$Space: 20px;
-
 * {
   box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Pattaya', sans-serif;
+  //font-family: 'Berkshire Swash', cursive;
+}
+p, span, a, li{
+  font-family: 'Arsenal', sans-serif;
 }
 body{
 
 }
+
 
 /*---------------------------------header style----------------------------------------*/
 .header {
