@@ -10,10 +10,11 @@ $breakpoint-xl: 1200px;
 $blue: #2962ff;
 $dark-blue: #0039cb;
 $light-blue: #768fff;
-$grey: #212121;
-$light-grey: #bdbdbd;
+$grey: #424242;
+$light-grey: #616161;
 $white: #fff;
 $black: #000;
+
 
 * {
   box-sizing: border-box;
@@ -79,7 +80,7 @@ footer {
   &__wrapper {
     display: grid;
     div {
-      border: 1px solid $white;
+      //border: 1px solid $white;
     }
   }
 }
@@ -219,11 +220,25 @@ footer {
         color: $white;
         margin: 5px 5px;
         text-decoration: none;
+        font-size: 20px
+      }
+      a:hover {
+        color: $blue;
+        border-bottom: 1px solid $blue;
+      }
+      i {
+        display: none;
       }
     }
     &__social {
       grid-column: 11/13;
       padding: 60px 0 0 90px;
+      i {
+        color: $white;
+      }
+      i:hover {
+        color: $blue;
+      }
       .fb {
         margin-right: 20px;
       }
@@ -236,9 +251,10 @@ footer {
       text-shadow: 1px 1px 20px black;
       p {
         text-decoration: underline;
+        font-size: 24px;
       }
       h2 {
-        font-size: 40px;
+        font-size: 58px;
       }
     }
     &__icon {
@@ -268,7 +284,42 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     div {
-      border: 1px solid $light-grey;
+      border: 1px solid #bdbdbd;
+    }
+    h3 {
+      margin: 40px 0 20px 0;
+      color: $grey;
+    }
+    p {
+      margin: 0 20px 40px 20px;
+      color: $light-grey;
+      font-weight: 600;
+    }
+    img {
+      width: 100%;
+    }
+  }
+//---------------------------------------CONTACT--------------
+  .contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    div {
+
+    }
+    &__map {
+      border: 1px solid $black;
+      iframe {
+        width:100%;
+      }
+    }
+    &__info {
+      border: 1px solid $black;
+      background-image: url("../img/info_img.jpg");
+      background-size: cover;
+      div {
+        background-color: $black;
+        
+      }
     }
   }
 //----------------------------------------FOOTER-------------
