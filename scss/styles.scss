@@ -12,8 +12,10 @@ $dark-blue: #0039cb;
 $light-blue: #768fff;
 $grey: #424242;
 $light-grey: #616161;
+$light-grey-border: #bdbdbd;
 $white: #fff;
 $black: #000;
+$red: #d32f2f;
 
 
 * {
@@ -45,6 +47,11 @@ body{
       width:100%;
     }
   }
+}
+.back_image_1 {
+  background-image: url("../img/back_image_2.jpg");
+  background-repeat: no-repeat;
+  min-height: 450px;
 }
 /*--------------------------------------main style--------------------------------------*/
 main {
@@ -91,7 +98,7 @@ footer {
     padding: 0 10px;
   }
   #myLinks {
-    //display: none;
+    display: none;
   }
   .header {
     background-size: cover;
@@ -130,6 +137,7 @@ footer {
       }
     }
     &__social {
+      display: none;
       grid-column: 5/10;
       border: 1px solid #000;
       grid-row: 1/2;
@@ -150,6 +158,9 @@ footer {
       color: $blue;
       font-size: 46px;
     }
+  }
+  .back_image_1 {
+    background-position: right;
   }
 //-------------------------------------------AGENCIES--------
   .agencies {
@@ -180,6 +191,46 @@ footer {
       width: 70%;
     }
 
+  }
+  footer {
+    padding: 20px 10px;
+  }
+//----------------------------------------page-menu---------------------------------
+  .page-menu {
+    text-align: center;
+    margin: 0;
+    &__title {
+      text-align: center;
+      padding: 10px 0 0 0;
+      color: $blue;
+      font-size: 50px;
+      text-transform: uppercase;
+      font-family: 'Arsenal', sans-serif;
+
+    }
+    &__div {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-row-gap: 20px;
+      border: 1px solid $light-grey-border;
+      padding: 10px;
+      margin-bottom: 20px;
+      h3 {
+        margin: 0px 0 0 0;
+        color: $grey;
+      }
+      p {
+        margin: 0 20px 20px 20px;
+        color: $light-grey;
+        font-weight: 600;
+      }
+      img {
+        width: 100%;
+      }
+      .red {
+        color: $red;
+      }
+    }
   }
 
 }
@@ -261,6 +312,9 @@ footer {
       display: none;
     }
   }
+  .back_image_1 {
+    min-height: 450px;
+  }
 //---------------------------------------AGENCIES------------
   .agencies {
     margin-top: -120px;
@@ -272,8 +326,20 @@ footer {
       height: 100%;
       padding: 70px;
     }
+    &__info:hover {
+      text-decoration: none;
+    }
     &__info {
       text-align: center;
+
+      h3 {
+        color: $grey;
+        font-size: 40px;
+      }
+      p {
+        color: $light-grey;
+        font-size: 24px;
+      }
     }
     &__img {
 
@@ -284,7 +350,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     div {
-      border: 1px solid #bdbdbd;
+      border: 1px solid $light-grey-border;
     }
     h3 {
       margin: 40px 0 20px 0;
@@ -307,18 +373,16 @@ footer {
 
     }
     &__map {
-      border: 1px solid $black;
       iframe {
         width:100%;
       }
     }
     &__info {
-      border: 1px solid $black;
       background-image: url("../img/info_img.jpg");
       background-size: cover;
       div {
         background-color: $black;
-        
+
       }
     }
   }
@@ -329,7 +393,39 @@ footer {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
+//----------------------------------------page-menu---------------------------------
+  .page-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    text-align: center;
+    margin: 40px 0;
+    &__title {
+      text-align: center;
+      padding: 30px 0 0 0;
+      color: $blue;
+      font-size: 50px;
+      text-transform: uppercase;
+      font-family: 'Arsenal', sans-serif;
 
+    }
+    &__div {
+      border: 1px solid $light-grey-border;
+      padding: 10px;
+      h3 {
+        margin: 20px 0 0 0;
+        color: $grey;
+      }
+      p {
+        margin: 0 20px 20px 20px;
+        color: $light-grey;
+        font-weight: 600;
+      }
+      .red {
+        color: $red;
+      }
+    }
+  }
 }
 /*-----------------------------------media screen pc larg--------------------------*/
 @media (min-width: 1201px) {
