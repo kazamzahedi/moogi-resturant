@@ -1,11 +1,8 @@
-
 $breakpoint-xs: 0;
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
-
-
 //-----------------------------------Variables
 $blue: #2962ff;
 $dark-blue: #0039cb;
@@ -17,7 +14,6 @@ $white: #fff;
 $black: #000;
 $red: #d32f2f;
 
-
 * {
   box-sizing: border-box;
 }
@@ -25,13 +21,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Pattaya', sans-serif;
   //font-family: 'Berkshire Swash', cursive;
 }
-p, span, a, li{
+p, span, a, li, input, label{
   font-family: 'Arsenal', sans-serif;
 }
-body{
-
-}
-
+body {}
 
 /*---------------------------------header style----------------------------------------*/
 .header {
@@ -48,10 +41,20 @@ body{
     }
   }
 }
-.back_image_1 {
-  background-image: url("../img/back_image_2.jpg");
-  background-repeat: no-repeat;
-  min-height: 450px;
+/*-----------------------------------------footer style----------------------------------*/
+footer {
+  min-height: 300px;
+  background-color: $black;
+  padding: 50px 0;
+  color: $white;
+}
+.footer {
+  &__wrapper {
+    display: grid;
+    div {
+      //border: 1px solid $white;
+    }
+  }
 }
 /*--------------------------------------main style--------------------------------------*/
 main {
@@ -75,24 +78,46 @@ main {
   padding: 100px 0;
   text-align: center;
 }
-
-/*-----------------------------------------footer style----------------------------------*/
-footer {
-  min-height: 300px;
-  background-color: $black;
+/*----------------------------------contact us page------------------------------------*/
+.contact_us {
   padding: 50px 0;
-  color: $white;
-}
-.footer {
-  &__wrapper {
-    display: grid;
-    div {
-      //border: 1px solid $white;
+  &__title {
+    text-align: center;
+  }
+  &__row {
+
+    :after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  &__column {
+    iframe {
+      height: 100%;
+    }
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid $light-grey-border;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    input[type=submit] {
+      background-color: $blue;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    input[type=submit]:hover {
+      background-color: $light-blue;
     }
   }
 }
 
-/*----------------------------------------MEDIA SCREEN mobile----------------------------*/
+/*----------------------------------------MEDIA SCREEN MOBILE----------------------------*/
 @media (max-width: 599px) {
   header, main, footer {
     padding: 0 10px;
@@ -160,9 +185,12 @@ footer {
     }
   }
   .back_image_1 {
+    background-position: center;
+  }
+  .back_image_2 {
     background-position: right;
   }
-//-------------------------------------------AGENCIES--------
+//--------------------MOBILE-----------AGENCIES homepage---------------
   .agencies {
     margin-top: -70px;
     display: grid;
@@ -195,7 +223,7 @@ footer {
   footer {
     padding: 20px 10px;
   }
-//----------------------------------------page-menu---------------------------------
+//----------------------MOBILE------------------menu page----------------------------
   .page-menu {
     text-align: center;
     margin: 0;
@@ -232,7 +260,23 @@ footer {
       }
     }
   }
+//-------------------MOBILE-----------------contact page----------------------------
+  .contact_us {
 
+    &__column {
+      iframe {
+        width: 100%;
+        min-height: 300px;
+      }
+      width: 100%;
+      margin: 20px 0 0 0;
+        input[type=submit] {
+          width: 100%;
+          margin-top: 0;
+        }
+
+    }
+  }
 }
 
 /*-----------------------------------media screen tablet------------------------*/
@@ -242,7 +286,6 @@ footer {
 
 /*----------------------------------media screen pc normal-------------------------*/
 @media (min-width:921px) {
-
   .center {
     margin:0px auto;
     width: 1200px;
@@ -315,7 +358,7 @@ footer {
   .back_image_1 {
     min-height: 450px;
   }
-//---------------------------------------AGENCIES------------
+//-------------------PC--------------------AGENCIES homepage------------
   .agencies {
     margin-top: -120px;
     grid-template-columns: repeat(2, 1fr);
@@ -345,7 +388,7 @@ footer {
 
     }
   }
-//-------------------------------------MENUS----------------
+//----------------------PC---------------MENUS homepage----------------
   .menus {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
@@ -365,7 +408,7 @@ footer {
       width: 100%;
     }
   }
-//---------------------------------------CONTACT--------------
+//----------------------PC-----------------CONTACT homepage--------------
   .contact{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -386,14 +429,14 @@ footer {
       }
     }
   }
-//----------------------------------------FOOTER-------------
+//-----------------------PC-----------------FOOTER-------------
   .footer {
     &__wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
-//----------------------------------------page-menu---------------------------------
+//-----------------------PC-----------------menu page-------------------------
   .page-menu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -426,8 +469,37 @@ footer {
       }
     }
   }
+//-----------------------PC----------------contact us page--------------------
+  .contact_us {
+    &__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 40px;
+    }
+  }
+
+/*
+  Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+*/
 }
-/*-----------------------------------media screen pc larg--------------------------*/
+/*-----------------------------------media screen pc larg-------------------*/
 @media (min-width: 1201px) {
 
+}
+//------------------header singel page--------
+.back_image_1, .back_image_2 {
+  background-repeat: no-repeat;
+  min-height: 450px;
+}
+.back_image_1 {
+  background-image: url("../img/back_image_1.jpg");
+}
+.back_image_2 {
+  background-image: url("../img/back_image_2.jpg");
 }

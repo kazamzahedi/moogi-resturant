@@ -5,7 +5,7 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Pattaya', sans-serif; }
 
-p, span, a, li {
+p, span, a, li, input, label {
   font-family: 'Arsenal', sans-serif; }
 
 /*---------------------------------header style----------------------------------------*/
@@ -17,10 +17,16 @@ p, span, a, li {
   .header__logo img {
     width: 100%; }
 
-.back_image_1 {
-  background-image: url("../img/back_image_2.jpg");
-  background-repeat: no-repeat;
-  min-height: 450px; }
+/*-----------------------------------------footer style----------------------------------*/
+footer {
+  min-height: 300px;
+  background-color: #000;
+  padding: 50px 0;
+  color: #fff; }
+
+.footer__wrapper {
+  display: -ms-grid;
+  display: grid; }
 
 /*--------------------------------------main style--------------------------------------*/
 .agencies {
@@ -38,18 +44,34 @@ p, span, a, li {
   padding: 100px 0;
   text-align: center; }
 
-/*-----------------------------------------footer style----------------------------------*/
-footer {
-  min-height: 300px;
-  background-color: #000;
-  padding: 50px 0;
-  color: #fff; }
+/*----------------------------------contact us page------------------------------------*/
+.contact_us {
+  padding: 50px 0; }
+  .contact_us__title {
+    text-align: center; }
+  .contact_us__row :after {
+    content: "";
+    display: table;
+    clear: both; }
+  .contact_us__column iframe {
+    height: 100%; }
+  .contact_us__column input[type=text], .contact_us__column select, .contact_us__column textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdbdbd;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; }
+  .contact_us__column input[type=submit] {
+    background-color: #2962ff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer; }
+  .contact_us__column input[type=submit]:hover {
+    background-color: #768fff; }
 
-.footer__wrapper {
-  display: -ms-grid;
-  display: grid; }
-
-/*----------------------------------------MEDIA SCREEN mobile----------------------------*/
+/*----------------------------------------MEDIA SCREEN MOBILE----------------------------*/
 @media (max-width: 599px) {
   header, main, footer {
     padding: 0 10px; }
@@ -118,6 +140,8 @@ footer {
       color: #2962ff;
       font-size: 46px; }
   .back_image_1 {
+    background-position: center; }
+  .back_image_2 {
     background-position: right; }
   .agencies {
     margin-top: -70px;
@@ -171,7 +195,16 @@ footer {
       .page-menu__div img {
         width: 100%; }
       .page-menu__div .red {
-        color: #d32f2f; } }
+        color: #d32f2f; }
+  .contact_us__column {
+    width: 100%;
+    margin: 20px 0 0 0; }
+    .contact_us__column iframe {
+      width: 100%;
+      min-height: 300px; }
+    .contact_us__column input[type=submit] {
+      width: 100%;
+      margin-top: 0; } }
 
 /*-----------------------------------media screen tablet------------------------*/
 /*----------------------------------media screen pc normal-------------------------*/
@@ -320,6 +353,30 @@ footer {
         color: #616161;
         font-weight: 600; }
       .page-menu__div .red {
-        color: #d32f2f; } }
+        color: #d32f2f; }
+  .contact_us__row {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px; }
+  /*
+  Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+*/ }
 
-/*-----------------------------------media screen pc larg--------------------------*/
+/*-----------------------------------media screen pc larg-------------------*/
+.back_image_1, .back_image_2 {
+  background-repeat: no-repeat;
+  min-height: 450px; }
+
+.back_image_1 {
+  background-image: url("../img/back_image_1.jpg"); }
+
+.back_image_2 {
+  background-image: url("../img/back_image_2.jpg"); }
