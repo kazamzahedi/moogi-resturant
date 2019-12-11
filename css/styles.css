@@ -38,7 +38,7 @@ footer {
   display: -ms-grid;
   display: grid; }
   .agencies__info {
-    background-image: url("../img/image_back_1.jpg");
+    background-image: url("../img/lucarno_image.jpg");
     background-repeat: no-repeat; }
   .agencies__img img {
     width: 100%; }
@@ -240,6 +240,8 @@ footer {
 /*-----------------------------------media screen tablet------------------------*/
 /*----------------------------------media screen pc normal-------------------------*/
 @media (min-width: 921px) {
+  .hover {
+    border-bottom: 1px solid #fff; }
   .center {
     margin: 0px auto;
     width: 1200px; }
@@ -317,19 +319,16 @@ footer {
     -webkit-box-shadow: 0 0 20px #000;
     box-shadow: 0 0 20px #000; }
     .agencies-background {
-      background-color: #fff;
-      opacity: 0.8;
       height: 100%;
-      padding: 70px; }
+      padding: 70px;
+      color: #fff; }
     .agencies__info:hover {
       text-decoration: none; }
     .agencies__info {
       text-align: center; }
       .agencies__info h3 {
-        color: #424242;
         font-size: 40px; }
       .agencies__info p {
-        color: #616161;
         font-size: 24px; }
   .menus {
     -ms-grid-columns: 1fr 1fr 1fr;
@@ -393,6 +392,32 @@ footer {
         font-weight: 600; }
       .page-menu__div .red {
         color: #d32f2f; }
+  .page-lucarno__menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px; }
+  .page-lucarno__div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40% 60%;
+    grid-template-columns: 40% 60%;
+    grid-gap: 10px;
+    border: 1px solid #bdbdbd;
+    padding: 10px; }
+    .page-lucarno__div h3 {
+      margin: 0px 0 0 0;
+      color: #424242;
+      font-size: 20px; }
+    .page-lucarno__div p {
+      font-size: 14px;
+      margin: 0 0 3px 0;
+      color: #616161; }
+    .page-lucarno__div img {
+      width: 100%; }
+    .page-lucarno__div .red {
+      color: #d32f2f; }
   .contact_us__row {
     display: -ms-grid;
     display: grid;
