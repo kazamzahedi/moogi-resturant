@@ -16,6 +16,11 @@ p, span, a, li, input, label {
     list-style: none; }
   .header__logo img {
     width: 100%; }
+  .header .header--title {
+    font-family: 'Fredericka the Great', cursive;
+    color: #fff;
+    text-align: center;
+    position: relative; }
 
 /*-----------------------------------------footer style----------------------------------*/
 footer {
@@ -44,6 +49,12 @@ footer {
   padding: 100px 0;
   text-align: center; }
 
+.contact__info {
+  background-image: url("../img/info_img.jpg");
+  background-size: cover;
+  color: #fff;
+  line-height: 1.5; }
+
 /*----------------------------------contact us page------------------------------------*/
 .contact_us {
   padding: 50px 0; }
@@ -54,7 +65,8 @@ footer {
     display: table;
     clear: both; }
   .contact_us__column iframe {
-    height: 100%; }
+    height: 100%;
+    width: 100%; }
   .contact_us__column input[type=text], .contact_us__column select, .contact_us__column textarea {
     width: 100%;
     padding: 12px;
@@ -77,9 +89,12 @@ footer {
     padding: 0 10px; }
   #myLinks {
     display: none; }
+  .header--title {
+    font-size: 50px;
+    top: 263px; }
   .header {
     background-size: cover;
-    min-height: 350px; }
+    min-height: 390px; }
     .header__wrapper {
       display: -ms-grid;
       display: grid;
@@ -100,21 +115,23 @@ footer {
       grid-column: 1/13;
       -ms-grid-row: 2;
       -ms-grid-row-span: 1;
-      grid-row: 2/3; }
+      grid-row: 2/3;
+      position: absolute;
+      width: 90%;
+      top: 75px; }
       .header__menu ul {
         padding: 0px; }
       .header__menu li {
         padding: 5px; }
-      .header__menu li:hover {
-        background-color: #616161;
-        opacity: 0.1; }
       .header__menu a {
-        display: block; }
+        display: block;
+        color: #fff;
+        font-size: 22px; }
       .header__menu li a:hover {
         color: #fff;
         text-decoration: none; }
       .header__menu i {
-        padding-right: 20px; }
+        padding-right: 10%; }
     .header__social {
       display: none;
       -ms-grid-column: 5;
@@ -126,19 +143,17 @@ footer {
       grid-row: 1/2;
       padding: 17px; }
     .header__title {
-      -ms-grid-column: 2;
-      -ms-grid-column-span: 10;
-      grid-column: 2/12;
-      border: 1px solid #000; }
+      display: none; }
     .header__icon {
       position: absolute;
       right: 0px;
       top: 0px;
-      border: 1px solid #000;
       padding: 5px 20px;
       opacity: 0.8;
-      color: #2962ff;
+      color: #fff;
       font-size: 46px; }
+  .back_image_1, .back_image_2 {
+    min-height: 390px; }
   .back_image_1 {
     background-position: center; }
   .back_image_2 {
@@ -164,8 +179,24 @@ footer {
     width: 100%; }
   .menus img {
     width: 70%; }
+  .contact {
+    display: -ms-grid;
+    display: grid;
+    grid-row-gap: 10px;
+    margin-bottom: 10px; }
+    .contact iframe {
+      width: 100%;
+      min-height: 300px; }
+    .contact__info {
+      padding: 20px;
+      color: #fff;
+      line-height: 1.5; }
+      .contact__info h2 {
+        font-size: 28px; }
+      .contact__info p {
+        font-size: 18px; }
   footer {
-    padding: 20px 10px; }
+    padding: 20px; }
   .page-menu {
     text-align: center;
     margin: 0; }
@@ -212,6 +243,9 @@ footer {
   .center {
     margin: 0px auto;
     width: 1200px; }
+  .header--title {
+    font-size: 100px;
+    top: 170px; }
   .header {
     min-height: 940px; }
     .header__wrapper {
@@ -223,7 +257,9 @@ footer {
     .header__logo {
       -ms-grid-column: 1;
       -ms-grid-column-span: 2;
-      grid-column: 1/3; }
+      grid-column: 1/3;
+      padding: 0 0 0 50px;
+      width: 80%; }
     .header__menu {
       -ms-grid-column: 3;
       -ms-grid-column-span: 8;
@@ -272,7 +308,7 @@ footer {
         font-size: 58px; }
     .header__icon {
       display: none; }
-  .back_image_1 {
+  .back_image_1, .back_image_2 {
     min-height: 450px; }
   .agencies {
     margin-top: -120px;
@@ -314,14 +350,17 @@ footer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr; }
+    grid-template-columns: 1fr 1fr;
+    min-height: 640px; }
     .contact__map iframe {
-      width: 100%; }
+      width: 100%;
+      height: 100%; }
     .contact__info {
-      background-image: url("../img/info_img.jpg");
-      background-size: cover; }
-      .contact__info div {
-        background-color: #000; }
+      padding: 100px; }
+      .contact__info h2 {
+        font-size: 48px; }
+      .contact__info p {
+        font-size: 24px; }
   .footer__wrapper {
     display: -ms-grid;
     display: grid;
@@ -372,8 +411,7 @@ footer {
 
 /*-----------------------------------media screen pc larg-------------------*/
 .back_image_1, .back_image_2 {
-  background-repeat: no-repeat;
-  min-height: 450px; }
+  background-repeat: no-repeat; }
 
 .back_image_1 {
   background-image: url("../img/back_image_1.jpg"); }

@@ -40,6 +40,12 @@ body {}
       width:100%;
     }
   }
+  .header--title {
+    font-family: 'Fredericka the Great', cursive;
+    color: #fff;
+    text-align: center;
+    position: relative;
+  }
 }
 /*-----------------------------------------footer style----------------------------------*/
 footer {
@@ -78,6 +84,14 @@ main {
   padding: 100px 0;
   text-align: center;
 }
+.contact {
+  &__info {
+    background-image: url("../img/info_img.jpg");
+    background-size: cover;
+    color: $white;
+    line-height: 1.5;
+  }
+}
 /*----------------------------------contact us page------------------------------------*/
 .contact_us {
   padding: 50px 0;
@@ -95,6 +109,7 @@ main {
   &__column {
     iframe {
       height: 100%;
+      width:100%;
     }
     input[type=text], select, textarea {
       width: 100%;
@@ -125,9 +140,13 @@ main {
   #myLinks {
     display: none;
   }
+  .header--title {
+    font-size: 50px;
+    top: 263px
+  }
   .header {
     background-size: cover;
-    min-height: 350px;
+    min-height: 390px;
     &__wrapper{
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -140,25 +159,27 @@ main {
     &__menu {
       grid-column: 1/13;
       grid-row: 2/3;
+      position: absolute;
+      width: 90%;
+      top: 75px;
+
       ul {
         padding: 0px;
       }
       li {
         padding: 5px;
       }
-      li:hover {
-        background-color: $light-grey;
-        opacity: 0.1;
-      }
       a {
         display: block;
+        color: $white;
+        font-size: 22px;
       }
       li a:hover {
         color: #fff;
         text-decoration: none;
       }
       i {
-        padding-right: 20px;
+        padding-right: 10%;
       }
     }
     &__social {
@@ -169,20 +190,21 @@ main {
       padding: 17px;
     }
     &__title {
-      grid-column: 2/12;
-      border: 1px solid #000;
+      display: none;
 
     }
     &__icon {
       position: absolute;
       right:0px;
       top:0px;
-      border: 1px solid #000;
       padding: 5px 20px;
       opacity: 0.8;
-      color: $blue;
+      color: $white;
       font-size: 46px;
     }
+  }
+  .back_image_1, .back_image_2 {
+    min-height: 390px;
   }
   .back_image_1 {
     background-position: center;
@@ -211,6 +233,7 @@ main {
       background-image: url(../img/image_2.jpg);
     }
   }
+//--------------------MOBILE-----------menus homepage---------------
   .menus {
     &__part {
       width: 100%;
@@ -218,10 +241,31 @@ main {
     img {
       width: 70%;
     }
-
   }
+//--------------------MOBILE-----------about us homepage---------------
+	 .contact {
+     display: grid;
+     grid-row-gap: 10px;
+     margin-bottom: 10px;
+     iframe {
+       width: 100%;
+       min-height: 300px;
+     }
+     &__info {
+       padding: 20px;
+       color: $white;
+       line-height: 1.5;
+       h2 {
+         font-size: 28px;
+       }
+       p {
+         font-size: 18px;
+       }
+     }
+   }
+
   footer {
-    padding: 20px 10px;
+    padding: 20px;
   }
 //----------------------MOBILE------------------menu page----------------------------
   .page-menu {
@@ -290,6 +334,10 @@ main {
     margin:0px auto;
     width: 1200px;
   }
+  .header--title {
+    font-size: 100px;
+    top: 170px
+  }
   .header {
     min-height: 940px;
     &__wrapper{
@@ -299,6 +347,8 @@ main {
     }
     &__logo {
       grid-column: 1/3;
+      padding: 0 0 0 50px;
+      width: 80%;
     }
     &__menu {
       grid-column: 3/11;
@@ -355,7 +405,7 @@ main {
       display: none;
     }
   }
-  .back_image_1 {
+  .back_image_1, .back_image_2 {
     min-height: 450px;
   }
 //-------------------PC--------------------AGENCIES homepage------------
@@ -412,20 +462,23 @@ main {
   .contact{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    min-height: 640px;
     div {
 
     }
     &__map {
       iframe {
         width:100%;
+        height: 100%;
       }
     }
     &__info {
-      background-image: url("../img/info_img.jpg");
-      background-size: cover;
-      div {
-        background-color: $black;
-
+      padding: 100px;
+      h2 {
+        font-size: 48px;
+      }
+      p {
+        font-size: 24px;
       }
     }
   }
@@ -495,7 +548,6 @@ main {
 //------------------header singel page--------
 .back_image_1, .back_image_2 {
   background-repeat: no-repeat;
-  min-height: 450px;
 }
 .back_image_1 {
   background-image: url("../img/back_image_1.jpg");
