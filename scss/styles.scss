@@ -1,8 +1,8 @@
-$breakpoint-xs: 0;
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+
+$breakpoint-xs: 560px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1025px;
+$breakpoint-lg: 1300px;
 //-----------------------------------Variables
 $blue: #2962ff;
 $dark-blue: #0039cb;
@@ -14,7 +14,7 @@ $white: #fff;
 $black: #000;
 $red: #d32f2f;
 
-* {
+*{
   box-sizing: border-box;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -26,32 +26,171 @@ p, span, a, li, input, label{
 }
 body {}
 
-/*---------------------------------header style----------------------------------------*/
+header, main, footer {
+  padding: 0 10px;
+}
+
+/*------------------HOME PAGE---------------HEADER----------------------------*/
 .header {
   background-image: url("../img/background_img_1.jpg");
   background-repeat: no-repeat;
-  &__menu {
-    ul {
-      list-style:none;
-    }
+  background-size: cover;
+  min-height: 390px;
+  &__wrapper{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat (2,1fr);
   }
   &__logo {
+    grid-column: 4/10;
+    margin-top: 40px;
+    padding: 20px;
     img {
       width:100%;
     }
   }
-  .header--title {
-    font-family: 'Fredericka the Great', cursive;
-    color: #fff;
-    text-align: center;
-    position: relative;
+  &__menu {
+    grid-column: 1/13;
+    grid-row: 2/3;
+    position: absolute;
+    width: 90%;
+    top: 75px;
+
+    ul {
+      list-style:none;
+      padding: 0px;
+    }
+    li {
+      padding: 5px;
+    }
+    a {
+      display: block;
+      color: $white;
+      font-size: 22px;
+    }
+    li a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+    i {
+      padding-right: 10%;
+    }
+  }
+  &__icon {
+    position: absolute;
+    right:0px;
+    top:0px;
+    padding: 5px 20px;
+    opacity: 0.8;
+    color: $white;
+    font-size: 46px;
+  }
+  &__social {
+    display: none;
+    //grid-column: 5/10;
+    //grid-row: 1/2;
+    //padding: 17px;
+  }
+  &__title {
+    display: none;
   }
 }
-/*-----------------------------------------footer style----------------------------------*/
+#header__menu {
+  display: none;
+}
+
+/*------------------SINGEL PAGE--------------HEADER---------*/
+.header--title {
+  font-family: 'Fredericka the Great', cursive;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 50px;
+  top: 122px
+}
+.back_image_1, .back_image_2 {
+  min-height: 390px;
+  background-repeat: no-repeat;
+}
+.back_image_1 {
+  background-image: url("../img/back_image_1.jpg");
+  background-position: center;
+}
+.back_image_2 {
+  background-image: url("../img/back_image_2.jpg");
+  background-position: right;
+}
+
+/*------------------HOME PAGE----------------MAIN-----------------------------*/
+
+//-------------------AGENCIES--
+.agencies {
+  display: grid;
+  margin-top: -70px;
+  display: grid;
+  &__info {
+    background-image: url(../img/image_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 20px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 10px;
+    min-height: 250px;
+  }
+  &__info2 {
+    background-image: url(../img/image_2.jpg);
+  }
+  &__img {
+    display: none;
+    img{ width: 100%;}
+  }
+}
+
+//----------------------MENUS--
+.menus {
+  display: grid;
+  padding: 100px 0;
+  text-align: center;
+  &__part {
+    width: 100%;
+  }
+  img {
+    width: 70%;
+  }
+}
+//--------------------CONTACT--
+.contact {
+  display: grid;
+  grid-row-gap: 10px;
+  margin-bottom: 10px;
+  iframe {
+    width: 100%;
+    min-height: 300px;
+  }
+  &__info {
+    background-image: url("../img/info_img.jpg");
+    background-size: cover;
+    color: $white;
+    line-height: 1.5;
+    padding: 20px;
+    color: $white;
+    line-height: 1.5;
+    h2 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+/*---------------------------------------------FOOTER-------------------------*/
 footer {
+  padding: 20px;
   min-height: 300px;
   background-color: $black;
-  padding: 50px 0;
   color: $white;
 }
 .footer {
@@ -62,213 +201,9 @@ footer {
     }
   }
 }
-/*--------------------------------------main style--------------------------------------*/
-main {
 
-}
-
-.agencies {
-  display: grid;
-  &__info {
-    background-image: url("../img/lucarno_image.jpg");
-    background-repeat: no-repeat;
-  }
-  &__img {
-    img{ width: 100%;}
-
-  }
-}
-
-.menus {
-  display: grid;
-  padding: 100px 0;
-  text-align: center;
-}
-.contact {
-  &__info {
-    background-image: url("../img/info_img.jpg");
-    background-size: cover;
-    color: $white;
-    line-height: 1.5;
-  }
-}
-/*----------------------------------contact us page------------------------------------*/
-.contact_us {
-  padding: 50px 0;
-  &__title {
-    text-align: center;
-  }
-  &__row {
-
-    :after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-  }
-  &__column {
-    iframe {
-      height: 100%;
-      width:100%;
-    }
-    input[type=text], select, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid $light-grey-border;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
-    }
-    input[type=submit] {
-      background-color: $blue;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      cursor: pointer;
-    }
-    input[type=submit]:hover {
-      background-color: $light-blue;
-    }
-  }
-}
-
-/*----------------------------------------MEDIA SCREEN MOBILE----------------------------*/
-@media (max-width: 599px) {
-  header, main, footer {
-    padding: 0 10px;
-  }
-  #myLinks {
-    display: none;
-  }
-  .header--title {
-    font-size: 50px;
-    top: 263px
-  }
-  .header {
-    background-size: cover;
-    min-height: 390px;
-    &__wrapper{
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: repeat (2,1fr);
-    }
-    &__logo {
-      grid-column: 1/4;
-      grid-row: 1/2;
-    }
-    &__menu {
-      grid-column: 1/13;
-      grid-row: 2/3;
-      position: absolute;
-      width: 90%;
-      top: 75px;
-
-      ul {
-        padding: 0px;
-      }
-      li {
-        padding: 5px;
-      }
-      a {
-        display: block;
-        color: $white;
-        font-size: 22px;
-      }
-      li a:hover {
-        color: #fff;
-        text-decoration: none;
-      }
-      i {
-        padding-right: 10%;
-      }
-    }
-    &__social {
-      display: none;
-      grid-column: 5/10;
-      border: 1px solid #000;
-      grid-row: 1/2;
-      padding: 17px;
-    }
-    &__title {
-      display: none;
-
-    }
-    &__icon {
-      position: absolute;
-      right:0px;
-      top:0px;
-      padding: 5px 20px;
-      opacity: 0.8;
-      color: $white;
-      font-size: 46px;
-    }
-  }
-  .back_image_1, .back_image_2 {
-    min-height: 390px;
-  }
-  .back_image_1 {
-    background-position: center;
-  }
-  .back_image_2 {
-    background-position: right;
-  }
-//--------------------MOBILE-----------AGENCIES homepage---------------
-  .agencies {
-    margin-top: -70px;
-    display: grid;
-    &__img {
-      display: none;
-    }
-    &__info {
-      background-image: url(../img/image_1.jpg);
-      background-size: cover;
-      width: 100%;
-      padding: 20px;
-      color: $white;
-      text-align: center;
-      margin-bottom: 10px;
-      min-height: 250px;
-    }
-    &__info2 {
-      background-image: url(../img/image_2.jpg);
-    }
-  }
-//--------------------MOBILE-----------menus homepage---------------
-  .menus {
-    &__part {
-      width: 100%;
-    }
-    img {
-      width: 70%;
-    }
-  }
-//--------------------MOBILE-----------about us homepage---------------
-	 .contact {
-     display: grid;
-     grid-row-gap: 10px;
-     margin-bottom: 10px;
-     iframe {
-       width: 100%;
-       min-height: 300px;
-     }
-     &__info {
-       padding: 20px;
-       color: $white;
-       line-height: 1.5;
-       h2 {
-         font-size: 28px;
-       }
-       p {
-         font-size: 18px;
-       }
-     }
-   }
-
-  footer {
-    padding: 20px;
-  }
-//----------------------MOBILE------------------menu page----------------------------
-  .page-menu {
+/*---------------------------------------------MENU PAGE----------------------*/
+.page-menu {
     text-align: center;
     margin: 0;
     &__title {
@@ -304,64 +239,105 @@ main {
       }
     }
   }
-//-------------------MOBILE-----------------contact page----------------------------
-  .contact_us {
 
-    &__column {
-      iframe {
-        width: 100%;
-        min-height: 300px;
-      }
+/*-------------------------------------------CONTACT US PAGE------------------*/
+.contact_us {
+  padding: 50px 0;
+  &__title {
+    text-align: center;
+  }
+  &__row {
+
+    :after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  &__column {
+    width: 100%;
+    margin: 20px 0 0 0;
+    iframe {
+      min-height: 300px;
+      width:100%;
+    }
+    input[type=text], select, textarea {
       width: 100%;
-      margin: 20px 0 0 0;
-        input[type=submit] {
-          width: 100%;
-          margin-top: 0;
-        }
-
+      padding: 12px;
+      border: 1px solid $light-grey-border;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    input[type=submit] {
+      background-color: $blue;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 0;
+    }
+    input[type=submit]:hover {
+      background-color: $light-blue;
     }
   }
 }
 
-/*-----------------------------------media screen tablet------------------------*/
-@media (min-width:600px) and (max-width: 920px) {
-
-}
-
-/*----------------------------------media screen pc normal-------------------------*/
-@media (min-width:921px) {
+/*--------------------------media screen mobile rotate------------------------*/
+@media (min-width:$breakpoint-sm) {
+  #header__menu {
+    display: block;
+  }
+  header, main ,footer {
+    padding: 0px;
+  }
   .hover {
     border-bottom: 1px solid $white;
   }
   .center {
     margin:0px auto;
-    width: 1200px;
+    width: 730px;
   }
   .header--title {
-    font-size: 100px;
-    top: 170px
+    font-size: 85px;
+    top: 44px
   }
   .header {
     min-height: 940px;
+    background-position: center;
     &__wrapper{
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-auto-rows: minmax(100px, auto);
     }
     &__logo {
-      grid-column: 1/3;
-      padding: 0 0 0 50px;
-      width: 80%;
+      grid-column: 5/9;
+      grid-row: 2/3;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+      img {
+        width: 230px;
+      }
     }
     &__menu {
       grid-column: 3/11;
+      grid-row: auto;
+      top: 20px;
+      position:fixed;
+      width:100%;
       ul {
-        padding: 50px 0;
+        padding: 0px;
+        margin:0px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        background-color: rgba(0, 0, 0, 0.5);
         text-align: center;
       }
       li{
         display: inline-block;
-        padding: 20px 10px;
+        padding: 5px 10px;
       }
       a {
         color: $white;
@@ -378,27 +354,27 @@ main {
       }
     }
     &__social {
-      grid-column: 11/13;
-      padding: 60px 0 0 90px;
-      i {
-        color: $white;
+      //grid-column: 11/13;
+      //padding: 60px 0 0 90px;
+      //i {
+      //  color: $white;
+      //}
+      //i:hover {
+      //  color: $blue;
+      //}
+      //.fb {
+      //  margin-right: 20px;
       }
-      i:hover {
-        color: $blue;
-      }
-      .fb {
-        margin-right: 20px;
-      }
-    }
     &__title {
       grid-column: 4/10;
       grid-row: 4/6;
       text-align: center;
+      display: block;
       color: $white;
       text-shadow: 1px 1px 20px black;
       p {
-        text-decoration: underline;
         font-size: 24px;
+        margin:0px;
       }
       h2 {
         font-size: 58px;
@@ -411,34 +387,277 @@ main {
   .back_image_1, .back_image_2 {
     min-height: 450px;
   }
-//-------------------PC--------------------AGENCIES homepage------------
-  .agencies {
-    margin-top: -120px;
-    grid-template-columns: repeat(2, 1fr);
-    box-shadow: 0 0 20px $black;
-    &-background {
-      height: 100%;
-      padding: 70px;
-      color: $white;
+  //---------------------PC---------------AGENCIES homepage-------------
+    .agencies {
+      margin-top: -120px;
+      grid-template-columns: repeat(2, 1fr);
+      box-shadow: 0 0 20px $black;
+      &-background {
+        height: 100%;
+        padding: 0px;
+        color: $white;
+      }
+      &__info:hover {
+        text-decoration: none;
+      }
+      &__info {
+        background-image: url("../img/lucarno_image.jpg");
+        background-repeat: no-repeat;
+        text-align: center;
+        margin:0px;
+        h3 {
+          font-size: 38px;
+        }
+        p {
+          font-size: 22px;
+        }
+      }
+      &__img {
+        display: block;
+      }
     }
-    &__info:hover {
-      text-decoration: none;
-    }
-    &__info {
-      text-align: center;
-
+  //---------------------PC---------------MENUS homepage----------------
+    .menus {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+      div {
+        border: 1px solid $light-grey-border;
+      }
       h3 {
-        font-size: 40px;
+        margin: 40px 0 20px 0;
+        color: $grey;
       }
       p {
-        font-size: 24px;
+        margin: 0 20px 40px 20px;
+        color: $light-grey;
+        font-weight: 600;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  //---------------------PC---------------CONTACT homepage--------------
+    .contact{
+      //display: grid;
+      //grid-template-columns: 1fr 1fr;
+      min-height: 640px;
+      margin: 0px;
+      div {
+
+      }
+      &__map {
+        iframe {
+          width:100%;
+          height: 100%;
+        }
+      }
+      &__info {
+        padding: 100px;
+        h2 {
+          font-size: 48px;
+        }
+        p {
+          font-size: 24px;
+        }
+      }
+    }
+  //---------------------PC---------------FOOTER------------------------
+    .footer {
+      &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  //---------------------PC---------------menu page---------------------
+    .page-menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+      text-align: center;
+      margin: 40px 0;
+      &__title {
+        text-align: center;
+        padding: 30px 0 0 0;
+        color: $blue;
+        font-size: 50px;
+        text-transform: uppercase;
+        font-family: 'Arsenal', sans-serif;
+
+      }
+      &__div {
+        border: 1px solid $light-grey-border;
+        margin:0px;
+        padding: 10px;
+        h3 {
+          margin: 0px;
+          color: $grey;
+        }
+        p {
+          margin: 0 20px 20px 20px;
+          color: $light-grey;
+          font-weight: 600;
+        }
+        .red {
+          color: $red;
+        }
+      }
+    }
+  //---------------------PC---------------lucarno page------------------
+    .page-lucarno {
+      &__menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+      &__div {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-gap: 10px;
+        border: 1px solid $light-grey-border;
+        padding: 10px;
+        h3 {
+          margin: 0px 0 0 0;
+          color: $grey;
+          font-size: 20px;
+        }
+        p {
+          font-size: 14px;
+          margin: 0 0 3px 0;
+          color: $light-grey;
+        }
+        img {
+          width: 100%;
+        }
+        .red {
+          color: $red;
+        }
+      }
+    }
+  //---------------------PC---------------contact us page---------------
+    .contact_us {
+      &__row {
+        //display: grid;
+        //grid-template-columns: 1fr;
+        //grid-gap: 40px;
+      }
+    }
+}
+/*---------------------------media screen tablet------------------------------*/
+@media (min-width:$breakpoint-md) {
+  .center {
+    //margin:0px auto;
+    width: 990px;
+  }
+  .header--title {
+    font-size: 100px;
+    top: 205px
+  }
+  .header {
+    min-height: 940px;
+    &__wrapper{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+    }
+    &__logo {
+      grid-column: 1/3;
+      grid-row:auto;
+      padding: 20px 0 0 20px;
+      width: 80%;
+      img {
+        width: 100%;
+      }
+    }
+    &__menu {
+      //grid-column: 3/11;
+      position: inherit;
+      ul {
+        padding: 35px 0;
+        //text-align: center;
+        border: none;
+        background-color: inherit;
+      }
+      li{
+        //display: inline-block;
+        //padding: 20px 10px;
+      }
+      a {
+        //color: $white;
+        //margin: 5px 5px;
+        //text-decoration: none;
+        //font-size: 20px
+      }
+      a:hover {
+        //color: $blue;
+        //border-bottom: 1px solid $blue;
+      }
+      i {
+        display: none;
+      }
+    }
+    &__social {
+      grid-column: 11/13;
+      padding: 53px 0 0 61px;
+      display: block;
+      i {
+        color: $white;
+      }
+      i:hover {
+        color: $blue;
+      }
+      .fb {
+        margin-right: 20px;
+      }
+    }
+    &__title {
+      //grid-column: 4/10;
+      //grid-row: 4/6;
+      //text-align: center;
+      //color: $white;
+      //text-shadow: 1px 1px 20px black;
+      p {
+        //font-size: 24px;
+      }
+      h2 {
+        //font-size: 58px;
+      }
+    }
+    &__icon {
+      //display: none;
+    }
+  }
+  .back_image_1, .back_image_2 {
+    min-height: 450px;
+  }
+//---------------------PC---------------AGENCIES homepage-------------
+  .agencies {
+    //margin-top: -120px;
+    //grid-template-columns: repeat(2, 1fr);
+    //box-shadow: 0 0 20px $black;
+    &-background {
+      //height: 100%;
+      //padding: 70px;
+      //color: $white;
+    }
+    &__info:hover {
+      //text-decoration: none;
+    }
+    &__info {
+      padding: 90px 55px;
+      //text-align: center;
+
+      h3 {
+        font-size: 44px;
+      }
+      p {
+        font-size: 21px;
       }
     }
     &__img {
 
     }
   }
-//----------------------PC---------------MENUS homepage----------------
+//---------------------PC---------------MENUS homepage----------------
   .menus {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
@@ -458,7 +677,7 @@ main {
       width: 100%;
     }
   }
-//----------------------PC-----------------CONTACT homepage--------------
+//---------------------PC---------------CONTACT homepage--------------
   .contact{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -482,20 +701,20 @@ main {
       }
     }
   }
-//-----------------------PC-----------------FOOTER-------------
+//---------------------PC---------------FOOTER------------------------
   .footer {
     &__wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
-//-----------------------PC-----------------menu page-------------------------
+//---------------------PC---------------menu page---------------------
   .page-menu {
-    display: grid;
+    //display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    text-align: center;
-    margin: 40px 0;
+    //grid-gap: 20px;
+    //text-align: center;
+    //margin: 40px 0;
     &__title {
       text-align: center;
       padding: 30px 0 0 0;
@@ -506,23 +725,23 @@ main {
 
     }
     &__div {
-      border: 1px solid $light-grey-border;
-      padding: 10px;
+      //border: 1px solid $light-grey-border;
+      //padding: 10px;
       h3 {
-        margin: 20px 0 0 0;
-        color: $grey;
+        //margin: 20px 0 0 0;
+        //color: $grey;
       }
       p {
-        margin: 0 20px 20px 20px;
-        color: $light-grey;
-        font-weight: 600;
+        margin: 0 0 8px 0;
+        //color: $light-grey;
+        //font-weight: 600;
       }
       .red {
-        color: $red;
+        //color: $red;
       }
     }
   }
-//-----------------------PC----------------lucarno page--------------------
+//---------------------PC---------------lucarno page------------------
   .page-lucarno {
     &__menu {
       display: grid;
@@ -553,7 +772,7 @@ main {
       }
     }
   }
-//-----------------------PC----------------contact us page--------------------
+//---------------------PC---------------contact us page---------------
   .contact_us {
     &__row {
       display: grid;
@@ -561,28 +780,239 @@ main {
       grid-gap: 40px;
     }
   }
+  iframe {
+    height: 100%;
+  }
+}
 
-/*
-  Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other
-  @media screen and (max-width: 600px) {
-    .column, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
+/*----------------------------media screen pc normal--------------------------*/
+@media (min-width:$breakpoint-lg) {
+  .hover {
+    //border-bottom: 1px solid $white;
+  }
+  .center {
+    //margin:0px auto;
+    width: 1200px;
+  }
+  .header--title {
+    //font-size: 100px;
+    top: 173px
+  }
+  .header {
+    //min-height: 940px;
+    &__wrapper{
+      //display: grid;
+      //grid-template-columns: repeat(12, 1fr);
+      //grid-auto-rows: minmax(100px, auto);
+    }
+    &__logo {
+      //grid-column: 1/3;
+      padding: 0 0 0 50px;
+      //width: 80%;
+    }
+    &__menu {
+      //grid-column: 3/11;
+      ul {
+        //padding: 50px 0;
+        //text-align: center;
+      }
+      li{
+        //display: inline-block;
+        //padding: 20px 10px;
+      }
+      a {
+        //color: $white;
+        //margin: 5px 5px;
+        //text-decoration: none;
+        //font-size: 20px
+      }
+      a:hover {
+        //color: $blue;
+        //border-bottom: 1px solid $blue;
+      }
+      i {
+        //display: none;
+      }
+    }
+    &__social {
+      grid-column: 11/13;
+      padding: 60px 0 0 90px;
+      i {
+        color: $white;
+      }
+      i:hover {
+        color: $blue;
+      }
+      .fb {
+        margin-right: 20px;
+      }
+    }
+    &__title {
+      //grid-column: 4/10;
+      //grid-row: 4/6;
+      //text-align: center;
+      //color: $white;
+      //text-shadow: 1px 1px 20px black;
+      p {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 58px;
+      }
+    }
+    &__icon {
+      //display: none;
     }
   }
-*/
-}
-/*-----------------------------------media screen pc larg-------------------*/
-@media (min-width: 1201px) {
+  .back_image_1, .back_image_2 {
+    min-height: 450px;
+  }
+//---------------------PC---------------AGENCIES homepage-------------
+  .agencies {
+    //margin-top: -120px;
+    //grid-template-columns: repeat(2, 1fr);
+    //box-shadow: 0 0 20px $black;
+    &-background {
+      //height: 100%;
+      //padding: 70px;
+      //color: $white;
+    }
+    &__info:hover {
+      //text-decoration: none;
+    }
+    &__info {
+      h3 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 24px;
+      }
+    }
+    &__img {
 
-}
-//------------------header singel page--------
-.back_image_1, .back_image_2 {
-  background-repeat: no-repeat;
-}
-.back_image_1 {
-  background-image: url("../img/back_image_1.jpg");
-}
-.back_image_2 {
-  background-image: url("../img/back_image_2.jpg");
+    }
+  }
+//---------------------PC---------------MENUS homepage----------------
+  .menus {
+    //grid-template-columns: 1fr 1fr 1fr;
+    //grid-gap: 20px;
+    div {
+      //border: 1px solid $light-grey-border;
+    }
+    h3 {
+      //margin: 40px 0 20px 0;
+      //color: $grey;
+    }
+    p {
+    //  margin: 0 20px 40px 20px;
+    //  color: $light-grey;
+    //  font-weight: 600;
+    }
+    img {
+    //  width: 100%;
+    }
+  }
+//---------------------PC---------------CONTACT homepage--------------
+  .contact{
+    //display: grid;
+    //grid-template-columns: 1fr 1fr;
+    //min-height: 640px;
+    div {
+
+    }
+    &__map {
+      iframe {
+        //width:100%;
+        //height: 100%;
+      }
+    }
+    &__info {
+      //padding: 100px;
+      h2 {
+        //font-size: 48px;
+      }
+      p {
+        //font-size: 24px;
+      }
+    }
+  }
+//---------------------PC---------------FOOTER------------------------
+  .footer {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+//---------------------PC---------------menu page---------------------
+  .page-menu {
+    //display: grid;
+    //grid-template-columns: 1fr 1fr 1fr;
+    //grid-gap: 20px;
+    //text-align: center;
+    //margin: 40px 0;
+    &__title {
+      text-align: center;
+      padding: 30px 0 0 0;
+      color: $blue;
+      font-size: 50px;
+      text-transform: uppercase;
+      font-family: 'Arsenal', sans-serif;
+
+    }
+    &__div {
+      //border: 1px solid $light-grey-border;
+      //padding: 10px;
+      h3 {
+        //margin: 20px 0 0 0;
+        //color: $grey;
+      }
+      p {
+        margin: 0 20px 20px 20px;
+        //color: $light-grey;
+        //font-weight: 600;
+      }
+      .red {
+        //color: $red;
+      }
+    }
+  }
+//---------------------PC---------------lucarno page------------------
+  .page-lucarno {
+    &__menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 10px;
+    }
+    &__div {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-gap: 10px;
+      border: 1px solid $light-grey-border;
+      padding: 10px;
+      h3 {
+        margin: 0px 0 0 0;
+        color: $grey;
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+        margin: 0 0 3px 0;
+        color: $light-grey;
+      }
+      img {
+        width: 100%;
+      }
+      .red {
+        color: $red;
+      }
+    }
+  }
+//---------------------PC---------------contact us page---------------
+  .contact_us {
+    &__row {
+      //display: grid;
+      //grid-template-columns: 1fr 1fr;
+      //grid-gap: 40px;
+    }
+  }
 }
