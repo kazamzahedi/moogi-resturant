@@ -28,6 +28,9 @@ body {}
 header, main, footer {
   padding: 0 10px;
 }
+#block {
+  display: none ;
+}
 
 /*------------------HOME PAGE---------------HEADER----------------------------*/
 .header {
@@ -103,6 +106,7 @@ header, main, footer {
 /*------------------SINGEL PAGE--------------HEADER---------*/
 .header--title {
   font-family: 'Fredericka the Great', cursive;
+  text-transform: uppercase;
   color: #fff;
   text-align: center;
   position: relative;
@@ -187,7 +191,7 @@ header, main, footer {
   }
 }
 
-/*---------------------------------------------FOOTER-------------------------*/
+/*---------------------------------------FOOTER------------------------------*/
 footer {
   padding: 20px;
   min-height: 300px;
@@ -203,7 +207,7 @@ footer {
   }
 }
 
-/*---------------------------------------------MENU PAGE----------------------*/
+/*---------------------------------------MENU PAGE---------------------------*/
 .page-menu {
     text-align: center;
     margin: 0;
@@ -241,8 +245,8 @@ footer {
     }
   }
 
-/*-------------------------------------------CONTACT US PAGE------------------*/
-.contact_us {
+/*---------------------------------------CONTACT US PAGE---------------------*/
+.page-contact_us {
   padding: 50px 0;
   &__title {
     text-align: center;
@@ -284,8 +288,15 @@ footer {
     }
   }
 }
+/*---------------------------------------SINGEL PAGE-------------------------*/
+.singel-page {
+  padding: 40px 0;
+  table td {
+    font-size: 24px;
+  }
+}
 
-/*-------------------------media mobile screen------------------------*/
+/*-------------------------media screen mobile-------------------------------*/
 @media (min-width: 300px) and (max-width: 340px) {
   .header__logo img {
     width: 150px;
@@ -304,7 +315,7 @@ footer {
     }
   }
 }
-/*--------------------------media screen tablet------------------------*/
+/*--------------------------media screen tablet------------------------------*/
 @media (min-width:$breakpoint-sm) {
   #header__menu {
     display: block;
@@ -562,7 +573,7 @@ footer {
       }
     }
 }
-/*---------------------------media screen tablet------------------------------*/
+/*---------------------------media screen pc---------------------------------*/
 @media (min-width:$breakpoint-md) {
   .center {
     //margin:0px auto;
@@ -762,8 +773,8 @@ footer {
       }
     }
   }
-//---------------------PC---------------lucarno page------------------
-  .page-lucarno {
+//---------------------PC---------------singel page-------------------
+  .singel-page {
     &__menu {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -794,7 +805,7 @@ footer {
     }
   }
 //---------------------PC---------------contact us page---------------
-  .contact_us {
+  .page-contact_us {
     &__row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -806,7 +817,7 @@ footer {
   }
 }
 
-/*----------------------------media screen pc normal--------------------------*/
+/*----------------------------media screen pc weight--------------------------*/
 @media (min-width:$breakpoint-lg) {
   .hover {
     //border-bottom: 1px solid $white;
@@ -1002,7 +1013,7 @@ footer {
     }
   }
 //---------------------PC---------------lucarno page------------------
-  .page-lucarno {
+  .singel-page {
     &__menu {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1033,7 +1044,7 @@ footer {
     }
   }
 //---------------------PC---------------contact us page---------------
-  .contact_us {
+  .page-contact_us {
     &__row {
       //display: grid;
       //grid-template-columns: 1fr 1fr;
