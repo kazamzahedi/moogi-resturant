@@ -151,12 +151,19 @@ header, main, footer {
     display: none;
     img{ width: 100%;}
   }
+  &__info--button{
+    border: none;
+    background-color: $white;
+    color: $black;
+    padding: 5px 20px;
+    &:hover{
+      background-color: $light-blue;
+    }
+  }
 }
 
 //----------------------MENUS--
 .menus {
-  display: grid;
-  padding: 100px 0;
   text-align: center;
   &__part {
     width: 100%;
@@ -451,7 +458,7 @@ footer {
     .menus {
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 20px;
-      div {
+      &__part div {
         border: 1px solid $light-grey-border;
       }
       h3 {
@@ -693,9 +700,6 @@ footer {
   .menus {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
-    div {
-      border: 1px solid $light-grey-border;
-    }
     h3 {
       margin: 40px 0 20px 0;
       color: $grey;

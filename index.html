@@ -2,17 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"
     <meta name="description" content="Free Web tutorials">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="John Doe">
     <title>MOOGI RESTURATN</title>
 
+    <!-- CSS -->
+
     <link href="https://fonts.googleapis.com/css?family=Arsenal|Pattaya&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carousel.css">
+
+    <!-- javascript -->
     <script src="js/javascript.js" defer></script>
 </head>
 <body>
@@ -54,7 +61,7 @@
               <h3>Our agency at Lucarno</h3>
               <p>For more information you can contact us at phone number
                 below or see our menus to continue reading</p>
-              <button>Read more</button>
+              <button class="agencies__info--button">Read more</button>
             </div>
           </a>
           <a href="agencies_lucarno.html" class="agencies__img">
@@ -69,28 +76,85 @@
               <h3>Our agency at Bellinzona</h3>
               <p>For more information you can contact us at phone number
                 below or see our menus to continue reading</p>
-              <button>Read more</button>
+              <button class="agencies__info--button">Read more</button>
             </div>
           </a>
         </section><!--               end of section-one               -->
 
-        <section class="menus"><!--                  section-tow               -->
-          <div calss="menus__part">
-            <h3>Doner Kebab</h3>
-            <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
-            <img src="img/menus_1.jpg" />
-          </div>
-          <div calss="menus__part">
-            <img src="img/menus_1.jpg" />
-            <h3>Doner Kebab</h3>
-            <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
-          </div>
-          <div calss="menus__part">
-            <h3>Doner Kebab</h3>
-            <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
-            <img src="img/menus_1.jpg" />
-          </div>
-        </section><!--               end of section-tow               -->
+        <!-- Top content -->
+        <div class="top-content">
+        	<div class="container-fluid">
+        		<div id="carousel-example" class="carousel slide" data-ride="carousel">
+        			<div class="carousel-inner row w-100 mx-auto menus" role="listbox">
+            			<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active menus__part">
+                    <div style="margin: 0px 20px">
+                    <h3>Doner Kebab</h3>
+                    <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
+                    <img src="img/menus_1.jpg" />
+                  </div>
+                  </div>
+                  <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 menus__part">
+                    <div style="margin: 0px 20px">
+                      <h3>Doner Kebab</h3>
+                      <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
+                      <img src="img/menus_1.jpg" />
+                    </div>
+                      </div>
+                  <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 menus__part">
+                    <div style="margin: 0px 20px">
+                      <h3>Doner Kebab</h3>
+                      <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
+                      <img src="img/menus_1.jpg" />
+                    </div>
+                      </div>
+                    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 menus__part">
+                      <div style="margin: 0px 20px">
+                        <h3>Doner Kebab</h3>
+                        <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
+                        <img src="img/menus_1.jpg" />
+                      </div>
+                        </div>
+                    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 menus__part">
+                      <div style="margin: 0px 20px">
+                        <h3>Doner Kebab</h3>
+                        <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
+                        <img src="img/menus_1.jpg" />
+                      </div>
+                        </div>
+                    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 menus__part">
+                      <div style="margin: 0px 20px">
+                        <h3>Doner Kebab</h3>
+                        <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
+                        <img src="img/menus_1.jpg" />
+                      </div>
+                        </div>
+                    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 menus__part">
+                      <div style="margin: 0px 20px">
+                        <h3>Doner Kebab</h3>
+                        <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
+                        <img src="img/menus_1.jpg" />
+                      </div>
+                        </div>
+                    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 menus__part">
+                      <div style="margin: 0px 20px">
+                        <h3>Doner Kebab</h3>
+                        <p>kasi ke donar maro emtehan nakarde bashe nesfe omresh bar fanas, hala az ma goftan bod</p>
+                        <img src="img/menus_1.jpg" />
+                      </div>
+                        </div>
+                        </div>
+        			<a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+        		</div>
+        	</div>
+        </div>
+
       </div>
       <section class="contact"><!--               section-three               -->
         <div class="contact__map">
@@ -119,5 +183,12 @@
           </div>
         </div>
     </footer>
+
+    <!-- Javascript -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
