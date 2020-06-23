@@ -200,18 +200,44 @@ header, main, footer {
 
 /*---------------------------------------FOOTER------------------------------*/
 footer {
-  padding: 20px;
+  padding: 0px 10px;
   min-height: 300px;
   background-color: $black;
-  color: $white;
+  color: $light-grey;
+  text-align: center;
 }
 .footer {
-  &__wrapper {
-    display: grid;
-    div {
-      //border: 1px solid $white;
+  &__agencies {
+    padding: 20px 0px;
+    border-bottom: 1px solid $light-grey-border;
+    &--maps {
+
+      iframe{
+      width: 100%;
+      }
+    }
+    &--info {
+      p {
+        margin: 5px;
+      }
     }
   }
+  &__social {
+    margin-top: 20px;
+    i {
+      margin: 0px 10px;
+    }
+  }
+  &__link{
+    margin-top: 20px;
+    a:hover{
+      color: $white;
+    }
+    p{
+      margin:0px;
+    }
+  }
+
 }
 
 /*---------------------------------------MENU PAGE---------------------------*/
@@ -479,7 +505,7 @@ footer {
       //display: grid;
       //grid-template-columns: 1fr 1fr;
       min-height: 640px;
-      margin: 0px;
+      margin-bottom: 0px;
       div {
 
       }
@@ -503,7 +529,20 @@ footer {
     .footer {
       &__wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+      }
+      &__agencies {
+        border: 1px solid $grey;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 15px $light-grey;
+      }
+      &__link {
+        a {
+          font-size: 18px;
+        }
       }
     }
   //---------------------PC---------------menu page---------------------
@@ -717,7 +756,7 @@ footer {
   .contact{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 640px;
+    min-height: 500px;
     div {
 
     }
@@ -728,7 +767,7 @@ footer {
       }
     }
     &__info {
-      padding: 100px;
+      padding: 15px 20px;
       h2 {
         font-size: 48px;
       }
@@ -741,7 +780,12 @@ footer {
   .footer {
     &__wrapper {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+    &__agencies {
+      display: grid;
+      grid-template-columns: 1fr 1.7fr;
+      text-align: left;
     }
   }
 //---------------------PC---------------menu page---------------------
@@ -956,18 +1000,18 @@ footer {
   .contact{
     //display: grid;
     //grid-template-columns: 1fr 1fr;
-    //min-height: 640px;
+    min-height: 640px;
     div {
 
     }
     &__map {
       iframe {
-        //width:100%;
-        //height: 100%;
+        width:100%;
+        height: 100%;
       }
     }
     &__info {
-      //padding: 100px;
+      padding: 100px;
       h2 {
         //font-size: 48px;
       }
@@ -980,7 +1024,7 @@ footer {
   .footer {
     &__wrapper {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
 //---------------------PC---------------menu page---------------------
