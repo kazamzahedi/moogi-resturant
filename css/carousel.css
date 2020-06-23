@@ -21,7 +21,10 @@
         display: block;
         visibility: visible;
     }
-
+    .carousel-item {
+        padding: 0px 10px;
+    }
+    
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -114,7 +117,9 @@
         display: block;
         visibility: visible;
     }
-
+    .carousel-item {
+        padding: 0px 10px;
+    }
 }
 
 

@@ -167,9 +167,20 @@ header, main, footer {
   text-align: center;
   &__part {
     width: 100%;
+    padding: 20px;
+    div {
+      border: 1px solid $light-grey-border;
+      padding: 20px;
+    }
+    h3 {
+      margin: 20px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
   }
   img {
-    width: 70%;
+    width: 100%;
   }
 }
 //--------------------CONTACT--
@@ -482,10 +493,15 @@ footer {
     }
   //---------------------PC---------------MENUS homepage----------------
     .menus {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 20px;
-      &__part div {
-        border: 1px solid $light-grey-border;
+      //display: grid;
+      //grid-template-columns: 1fr 1fr 1fr;
+      //grid-gap: 10px;
+      &__part {
+        
+        div {
+          border: 1px solid $light-grey-border;
+          padding: 0px;
+        }
       }
       h3 {
         margin: 40px 0 20px 0;
@@ -737,7 +753,7 @@ footer {
   }
 //---------------------PC---------------MENUS homepage----------------
   .menus {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
     h3 {
       margin: 40px 0 20px 0;

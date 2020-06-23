@@ -131,9 +131,17 @@ header, main, footer {
 .menus {
   text-align: center; }
   .menus__part {
-    width: 100%; }
+    width: 100%;
+    padding: 20px; }
+    .menus__part div {
+      border: 1px solid #bdbdbd;
+      padding: 20px; }
+    .menus__part h3 {
+      margin: 20px; }
+    .menus__part p {
+      margin-bottom: 30px; }
   .menus img {
-    width: 70%; }
+    width: 100%; }
 
 .contact {
   display: -ms-grid;
@@ -374,21 +382,18 @@ footer {
         font-size: 22px; }
     .agencies__img {
       display: block; }
-  .menus {
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px; }
-    .menus__part div {
-      border: 1px solid #bdbdbd; }
-    .menus h3 {
-      margin: 40px 0 20px 0;
-      color: #424242; }
-    .menus p {
-      margin: 0 20px 40px 20px;
-      color: #616161;
-      font-weight: 600; }
-    .menus img {
-      width: 100%; }
+  .menus__part div {
+    border: 1px solid #bdbdbd;
+    padding: 0px; }
+  .menus h3 {
+    margin: 40px 0 20px 0;
+    color: #424242; }
+  .menus p {
+    margin: 0 20px 40px 20px;
+    color: #616161;
+    font-weight: 600; }
+  .menus img {
+    width: 100%; }
   .contact {
     min-height: 640px;
     margin-bottom: 0px; }
@@ -526,8 +531,8 @@ footer {
     .agencies__info p {
       font-size: 21px; }
   .menus {
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px; }
     .menus h3 {
       margin: 40px 0 20px 0;
