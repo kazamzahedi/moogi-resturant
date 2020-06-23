@@ -135,7 +135,7 @@ header, main, footer {
     padding: 20px; }
     .menus__part div {
       border: 1px solid #bdbdbd;
-      padding: 20px; }
+      margin: 0px 10px; }
     .menus__part h3 {
       margin: 20px; }
     .menus__part p {
