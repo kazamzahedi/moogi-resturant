@@ -532,8 +532,7 @@ footer {
       font-size: 21px; }
   .menus {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px; }
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
     .menus h3 {
       margin: 40px 0 20px 0;
       color: #424242; }

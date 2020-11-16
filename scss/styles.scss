@@ -30,6 +30,10 @@ header, main, footer {
 }
 #block {
   display: none ;
+
+
+
+  
 }
 
 /*------------------HOME PAGE---------------HEADER----------------------------*/
@@ -754,7 +758,7 @@ footer {
 //---------------------PC---------------MENUS homepage----------------
   .menus {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
+    //grid-gap: 20px;
     h3 {
       margin: 40px 0 20px 0;
       color: $grey;
