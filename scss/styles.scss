@@ -30,11 +30,12 @@ header, main, footer {
 }
 #block {
   display: none ;
-
-
-
-  
 }
+.hover {
+  border-bottom: 2px solid $blue;
+  color: $blue !important;
+}
+
 
 /*------------------HOME PAGE---------------HEADER----------------------------*/
 .header {
@@ -371,9 +372,6 @@ footer {
   header, main ,footer {
     padding: 0px;
   }
-  .hover {
-    border-bottom: 1px solid $white;
-  }
   .center {
     margin:0px auto;
     width: 730px;
@@ -426,7 +424,7 @@ footer {
       }
       a:hover {
         color: $blue;
-        border-bottom: 1px solid $blue;
+        border-bottom: 2px solid $blue;
       }
       i {
         display: none;

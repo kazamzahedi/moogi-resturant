@@ -14,6 +14,10 @@ header, main, footer {
 #block {
   display: none; }
 
+.hover {
+  border-bottom: 2px solid #2962ff;
+  color: #2962ff !important; }
+
 /*------------------HOME PAGE---------------HEADER----------------------------*/
 .header {
   background-image: url("../img/background_img_1.jpg");
@@ -282,8 +286,6 @@ footer {
     display: block; }
   header, main, footer {
     padding: 0px; }
-  .hover {
-    border-bottom: 1px solid #fff; }
   .center {
     margin: 0px auto;
     width: 730px; }
@@ -336,7 +338,7 @@ footer {
         font-size: 20px; }
       .header__menu a:hover {
         color: #2962ff;
-        border-bottom: 1px solid #2962ff; }
+        border-bottom: 2px solid #2962ff; }
       .header__menu i {
         display: none; }
     .header__title {
