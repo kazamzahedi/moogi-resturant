@@ -15,7 +15,7 @@ header, main, footer {
   display: none; }
 
 .hover {
-  border-bottom: 2px solid #2962ff;
+  /* border-bottom: 2px solid $blue; */
   color: #2962ff !important; }
 
 /*------------------HOME PAGE---------------HEADER----------------------------*/
