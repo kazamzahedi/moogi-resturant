@@ -21,26 +21,41 @@
 
     <!-- javascript -->
     <script src="js/javascript.js" defer></script>
+    <script src="js/navbar.js" defer></script>
 </head>
 <body>
     <header class="header"><!--        HEADER           -->
       <div class="header__wrapper">
         <a class="header__logo" href="#"><img src="img/logo.png"/></a>
-
-        <nav id="header__menu" class="header__menu">
-          <ul>
-            <li><a href="index.html" class="hover"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-            <li><a href="#"><i class="fa fa-clipboard" aria-hidden="true"></i>Agencies</a></li>
-            <li><a href="menu.html"><i class="fa fa-folder-open" aria-hidden="true"></i>Menu</a></li>
-            <li><a href="about-us.html"><i class="fa fa-binoculars" aria-hidden="true"></i>About us</a></li>
-            <li><a href="contact-us.html"><i class="fa fa-phone" aria-hidden="true"></i>Contact us</a></li>
-            <li><a href="#" class="hover"><i class="fa fa-binoculars" aria-hidden="true"></i>EN</a></li>
-            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>DE</a></li>
-        </ul>
-        </nav>
-        <a href="javascript:void(0);" class="header__icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+       
+        <nav id="nav" class="nav" role="navigation">
+          <!-- ACTUAL NAVIGATION MENU -->
+          <ul class="nav__menu" id="menu" tabindex="-1" aria-label="main navigation" hidden>
+            <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Agencies</a></li>
+            <li class="nav__item"><a href="menu.html" class="nav__link">Menu</a></li>
+            <li class="nav__item"><a href="about-us.html" class="nav__link">About us</a></li>
+            <li class="nav__item"><a href="contact-us.html" class="nav__link">Contact us</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">EN</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">DE</a></li>
+          </ul>
+          <!-- MENU TOGGLE BUTTON -->
+          <a href="#nav" class="nav__toggle" role="button" aria-expanded="false" aria-controls="menu">
+            <svg class="menuicon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+              <title>Toggle Menu</title>
+              <g>
+                <line class="menuicon__bar" x1="13" y1="16.5" x2="37" y2="16.5"/>
+                <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5"/>
+                <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5"/>
+                <line class="menuicon__bar" x1="13" y1="32.5" x2="37" y2="32.5"/>
+                <circle class="menuicon__circle" r="23" cx="25" cy="25" />
+              </g>
+            </svg>
+          </a>
+          <!-- ANIMATED BACKGROUND ELEMENT -->
+          <div class="splash"></div>
+          
+        </nav>     
 
         <div class="header__social">
           <a href="#"><i class="fa fa-facebook-square fa-3x fb" aria-hidden="true"></i></a>
@@ -87,56 +102,56 @@
         	<div class="container-fluid">
         		<div id="carousel-example" class="carousel slide" data-ride="carousel">
         			<div class="carousel-inner row w-100 mx-auto menus" role="listbox">
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 active menus__part">
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 active menus__part">
                   <div>
                     <h3>kebab focaccia1</h3>
                     <p>insalata, pomodori, carote, salsa su richiesta</p>
                     <img src="img/Kebab-Focaccia.jpg" />
                   </div>
                 </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 menus__part">
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
                   <div>
                     <img src="img/Kebab-Focaccia.jpg" />
                     <h3>kebab focaccia2</h3>
                     <p>insalata, pomodori, carote, salsa su richiesta</p>
                   </div>
                 </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 menus__part">
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
                   <div>
                     <h3>kebab focaccia3</h3>
                     <p>insalata, pomodori, carote, salsa su richiesta</p>
                     <img src="img/Kebab-Focaccia.jpg" />
                   </div>
                 </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 menus__part">
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
                   <div>
                     <img src="img/Kebab-Focaccia.jpg" />
                     <h3>kebab focaccia4</h3>
                     <p>insalata, pomodori, carote, salsa su richiesta</p>
                   </div>
                 </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 menus__part">
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
                   <div>
                     <h3>kebab focaccia5</h3>
                     <p>insalata, pomodori, carote, salsa su richiesta</p>
                     <img src="img/Kebab-Focaccia.jpg" />
                   </div>
                 </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 menus__part">
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
                   <div>
                     <img src="img/Kebab-Focaccia.jpg" />
                     <h3>kebab focaccia6</h3>
                     <p>insalata, pomodori, carote, salsa su richiesta</p>
                   </div>
                 </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 menus__part">
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
                   <div>
                     <h3>kebab focaccia7</h3>
                     <p>insalata, pomodori, carote, salsa su richiesta</p>
                     <img src="img/Kebab-Focaccia.jpg" />
                   </div>
                 </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 menus__part">
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
                   <div>
                     <img src="img/Kebab-Focaccia.jpg" />
                     <h3>kebab focaccia8</h3>
