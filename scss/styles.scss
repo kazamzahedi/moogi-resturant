@@ -935,6 +935,14 @@ footer {
         width: 150px;
       }
     }
+    .nav {
+      position:absolute;
+      &__menu {
+        background:none;
+        border: none;
+        margin-top: 35px;
+      }
+    }
     &__menu {
       //grid-column: 3/11;
       position: inherit;

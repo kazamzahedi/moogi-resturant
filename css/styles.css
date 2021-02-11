@@ -766,6 +766,12 @@ footer {
       margin: 0px; }
       .header__logo img {
         width: 150px; }
+    .header .nav {
+      position: absolute; }
+      .header .nav__menu {
+        background: none;
+        border: none;
+        margin-top: 35px; }
     .header__menu {
       position: inherit; }
       .header__menu ul {
