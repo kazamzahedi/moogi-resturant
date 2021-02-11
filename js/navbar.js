@@ -3,7 +3,20 @@ const menu = document.querySelector("#menu");
 const menuToggle = document.querySelector(".nav__toggle");
 let isMenuOpen = false;
 // screen width bigger than 666px
+window.onload = function () {
+  const widthOfScreen = screen.width;
+  if (widthOfScreen >= "666") {
+    console.log(widthOfScreen);
+    isMenuOpen = !isMenuOpen;
 
+    // toggle a11y attributes and active class
+    menuToggle.setAttribute("aria-expanded", String(isMenuOpen));
+    menu.hidden = !isMenuOpen;
+    nav.classList.toggle("nav--open");
+    
+
+  }
+}
 // TOGGLE MENU ACTIVE STATE
 menuToggle.addEventListener("click", (e) => {
   e.preventDefault();
