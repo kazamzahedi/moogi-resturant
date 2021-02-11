@@ -551,15 +551,19 @@ footer {
         background-color: rgba(0, 0, 0, 0.5);
         text-align: center; }
         .header .nav__menu li {
-          display: inline-block; }
-        .header .nav__menu a {
-          color: #fff;
-          margin: 5px 5px;
-          text-decoration: none;
-          font-size: 20px; }
-        .header .nav__menu a:hover {
-          color: #2962ff;
-          border-bottom: 2px solid #2962ff; }
+          display: block; }
+          .header .nav__menu li .dropdown-menu {
+            position: absolute; }
+            .header .nav__menu li .dropdown-menu li :hover {
+              border: none;
+              background-color: none; }
+            .header .nav__menu li .dropdown-menu li a {
+              color: #fff;
+              margin: 5px 5px;
+              text-decoration: none;
+              font-size: 20px;
+              color: black;
+              margin: 0px; }
       .header .nav__link {
         color: white;
         display: block;
@@ -772,6 +776,8 @@ footer {
         background: none;
         border: none;
         margin-top: 35px; }
+    .header .nav-drop_click {
+      position: absolute; }
     .header__menu {
       position: inherit; }
       .header__menu ul {

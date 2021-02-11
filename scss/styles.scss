@@ -603,18 +603,25 @@ footer {
         border-bottom: 1px solid #fff;
         background-color: rgba(0, 0, 0, 0.5);
         text-align: center;       
-          li{
-            display: inline-block;
-          }
-          a {
-            color: $white;
-            margin: 5px 5px;
-            text-decoration: none;
-            font-size: 20px
-          }
-          a:hover {
-            color: $blue;
-            border-bottom: 2px solid $blue;
+          li {
+            display: block;
+            .dropdown-menu {
+              position: absolute;
+              li {
+                :hover {
+                  border:none;
+                  background-color: none;
+                }
+                a {
+                  color: $white;
+                  margin: 5px 5px;
+                  text-decoration: none;
+                  font-size: 20px;
+                  color: black;
+                  margin: 0px;
+                }
+              }
+            }
           }
       }
       &__link {
@@ -942,6 +949,9 @@ footer {
         border: none;
         margin-top: 35px;
       }
+    }
+    .nav-drop_click {
+      position: absolute;
     }
     &__menu {
       //grid-column: 3/11;
