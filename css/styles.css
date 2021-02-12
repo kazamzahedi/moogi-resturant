@@ -70,7 +70,7 @@ header, main, footer {
     -ms-grid-column: 4;
     -ms-grid-column-span: 6;
     grid-column: 4/10;
-    margin-top: 40px;
+    margin-top: 120px;
     text-align: center; }
     .header__logo img {
       width: 180px; }
@@ -272,7 +272,7 @@ header, main, footer {
   text-align: center;
   position: relative;
   font-size: 50px;
-  top: 140px; }
+  top: 60px; }
 
 .back_image_1, .back_image_2 {
   min-height: 390px;
