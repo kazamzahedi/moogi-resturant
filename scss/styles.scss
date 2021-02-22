@@ -378,6 +378,7 @@ header, main, footer {
     width: 100%;
   }
 }
+
 //--------------------CONTACT--
 .contact {
   display: grid;
@@ -535,6 +536,66 @@ footer {
   }
 }
 
+$white: #fff;
+$black: #2e2e2e;
+$gray: #787878;
+$highlight: #ea8478;
+$footer: #f7f7f7;
+
+  .gallery {
+    padding: 0 0 4rem 0;
+
+    &__img-container {
+      width: 100%;
+      height: 200px;
+      cursor: pointer;
+      overflow: hidden;
+      &:hover .img-content-hover {
+        display: block;
+      }
+    }
+    
+    &__img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transform: scale(1);
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &__img-content-hover {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      display: none;
+      padding: 1rem;
+      background: $white;
+      font-weight: 400;
+      margin-top: 1.25rem;
+      margin-left: -2rem;
+    }
+
+    &__title {
+      color: $black;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    &__category {
+      font-size: 1rem;
+      color: $gray;
+    }
+    
+    &__img-content {
+      display: none;
+    }
+  }
+
 /*-------------------------media screen mobile-------------------------------*/
 @media (min-width: 300px) and (max-width: 340px) {
   .header__logo img {
@@ -594,6 +655,8 @@ footer {
       top: 20px;
       position:fixed;
       width:100%;
+      padding-left:0px;
+      padding-right: 0px;
       &__menu {
         flex-direction: row;
         padding: 0px;
@@ -906,6 +969,33 @@ footer {
         }
       }
     }
+    @supports (display: grid) {
+      .gallery__grid {
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        grid-auto-rows: minmax(100px, auto);
+      }
+    }
+    .gallery {
+      img {
+        :hover{
+          transform: none;
+        }
+      }
+    
+      &__img-container {
+        height: 100%;
+      }
+    
+      &__img-content {
+        display: block;
+        padding: 1rem 0;
+      }
+    
+    }
+  
   //---------------------PC---------------contact us page---------------
     .contact_us {
       &__row {
