@@ -938,64 +938,65 @@ $footer: #f7f7f7;
         }
       }
     }
-  //---------------------PC---------------lucarno page------------------
-    .page-lucarno {
-      &__menu {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 10px;
+  //---------------------PC---------------singel page------------------
+    .singel-page {
+      .page-lucarno {
+        &__menu {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-gap: 10px;
+        }
+        &__div {
+          display: grid;
+          grid-template-columns: 40% 60%;
+          grid-gap: 10px;
+          border: 1px solid $light-grey-border;
+          padding: 10px;
+          h3 {
+            margin: 0px 0 0 0;
+            color: $grey;
+            font-size: 20px;
+          }
+          p {
+            font-size: 14px;
+            margin: 0 0 3px 0;
+            color: $light-grey;
+          }
+          img {
+            width: 100%;
+          }
+          .red {
+            color: $red;
+          }
+        }
       }
-      &__div {
-        display: grid;
-        grid-template-columns: 40% 60%;
-        grid-gap: 10px;
-        border: 1px solid $light-grey-border;
-        padding: 10px;
-        h3 {
-          margin: 0px 0 0 0;
-          color: $grey;
-          font-size: 20px;
+      @supports (display: grid) {
+        .gallery__grid {
+          grid-gap: 1rem;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 20px;
+          grid-auto-rows: minmax(100px, auto);
         }
-        p {
-          font-size: 14px;
-          margin: 0 0 3px 0;
-          color: $light-grey;
-        }
+      }
+      .gallery {
         img {
-          width: 100%;
+          :hover{
+            transform: none;
+          }
         }
-        .red {
-          color: $red;
+      
+        &__img-container {
+          height: 100%;
         }
+      
+        &__img-content {
+          display: block;
+          padding: 1rem 0;
+        }
+      
       }
     }
-    @supports (display: grid) {
-      .gallery__grid {
-        grid-gap: 1rem;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 20px;
-        grid-auto-rows: minmax(100px, auto);
-      }
-    }
-    .gallery {
-      img {
-        :hover{
-          transform: none;
-        }
-      }
-    
-      &__img-container {
-        height: 100%;
-      }
-    
-      &__img-content {
-        display: block;
-        padding: 1rem 0;
-      }
-    
-    }
-  
   //---------------------PC---------------contact us page---------------
     .contact_us {
       &__row {
