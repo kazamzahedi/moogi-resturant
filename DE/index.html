@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"
+    <meta name="description" content="">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="kazam Zahedi">
+    <title>MOOGI RESTURATN</title>
+
+    <!-- CSS -->
+
+    <link href="https://fonts.googleapis.com/css?family=Arsenal|Pattaya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/carousel.css">
+
+    <!-- javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="../js/javascript.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
+</head>
+<body>
+    <header class="header"><!--        HEADER           -->
+      <div class="header__wrapper">
+        <a class="header__logo" href="#"><img src="../img/logo.png"/></a>
+       
+        <nav id="nav" class="nav navbar" role="navigation">
+          <!-- ACTUAL NAVIGATION MENU -->
+          <ul class="nav__menu navbar-nav mr-auto" id="menu" tabindex="-1" aria-label="main navigation" hidden>
+            <li class="nav__item"><a href="index.html" class="nav__link hover">Home</a></li>
+            <li class="nav-item dropdown dropdown-backdrop">
+              <a class="nav__link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Agencies
+              </a>
+              <ul class="nav-drop dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="agencies_bellinzona.html">Bellinzona</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="agencies_lucarno.html">Lugano</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"><a href="menu.html" class="nav__link">Menu</a></li>
+            <li class="nav__item"><a href="about-us.html" class="nav__link">About us</a></li>
+            <li class="nav__item"><a href="contact-us.html" class="nav__link">Contact us</a></li>
+            <li class="nav__item"><a href="../index.html" class="nav__link">IT</a></li>
+            <li class="nav__item"><a href="../EN/index.html" class="nav__link">EN</a></li>
+            <li class="nav__item"><a href="#" class="nav__link hover">DE</a></li>
+          </ul>
+          <!-- MENU TOGGLE BUTTON -->
+          <a href="#nav" class="nav__toggle" role="button" aria-expanded="false" aria-controls="menu">
+            <svg class="menuicon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+              <title>Toggle Menu</title>
+              <g>
+                <line class="menuicon__bar" x1="13" y1="16.5" x2="37" y2="16.5"/>
+                <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5"/>
+                <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5"/>
+                <line class="menuicon__bar" x1="13" y1="32.5" x2="37" y2="32.5"/>
+                <circle class="menuicon__circle" r="23" cx="25" cy="25" />
+              </g>
+            </svg>
+          </a>
+          <!-- ANIMATED BACKGROUND ELEMENT -->
+          <div class="splash"></div>
+          
+        </nav>     
+
+        <div class="header__social">
+          <a href="#"><i class="fa fa-facebook-square fa-3x fb" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="header__title">
+          <p>Wellcom to</p>
+          <h2>Moogi resturant</h2>
+        </div>
+      </div>
+    </header><!--        END OF HEADER           -->
+
+    <main>
+      <div class="center">
+        <section class="agencies"><!--               section-one               -->
+          <a href="agencies_lucarno.html" class="agencies__info">
+            <div class="agencies-background">
+              <h3>Our agency at Lucarno</h3>
+              <p>For more information you can contact us at phone number
+                below or see our menus to continue reading</p>
+              <button class="agencies__info--button">Read more</button>
+            </div>
+          </a>
+          <a href="agencies_lucarno.html" class="agencies__img">
+            <img src="../img/image_1.jpg" />
+          </a>
+
+          <a href="agencies_bellinzona.html" class="agencies__img">
+            <img src="../img/image_2.jpg" />
+          </a>
+          <a href="agencies_bellinzona.html" class="agencies__info agencies__info2">
+            <div class="agencies-background">
+              <h3>Our agency at Bellinzona</h3>
+              <p>For more information you can contact us at phone number
+                below or see our menus to continue reading</p>
+              <button class="agencies__info--button">Read more</button>
+            </div>
+          </a>
+        </section><!--               end of section-one               -->
+
+        <!-- Top content -->
+        <div class="top-content">
+        	<div class="container-fluid">
+        		<div id="carousel-example" class="carousel slide" data-ride="carousel">
+        			<div class="carousel-inner row w-100 mx-auto menus" role="listbox">
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 active menus__part">
+                  <div>
+                    <h3>kebab focaccia1</h3>
+                    <p>insalata, pomodori, carote, salsa su richiesta</p>
+                    <img src="../img/Kebab-Focaccia.jpg" />
+                  </div>
+                </div>
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
+                  <div>
+                    <img src="../img/Kebab-Focaccia.jpg" />
+                    <h3>kebab focaccia2</h3>
+                    <p>insalata, pomodori, carote, salsa su richiesta</p>
+                  </div>
+                </div>
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
+                  <div>
+                    <h3>kebab focaccia3</h3>
+                    <p>insalata, pomodori, carote, salsa su richiesta</p>
+                    <img src="../img/Kebab-Focaccia.jpg" />
+                  </div>
+                </div>
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
+                  <div>
+                    <img src="../img/Kebab-Focaccia.jpg" />
+                    <h3>kebab focaccia4</h3>
+                    <p>insalata, pomodori, carote, salsa su richiesta</p>
+                  </div>
+                </div>
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
+                  <div>
+                    <h3>kebab focaccia5</h3>
+                    <p>insalata, pomodori, carote, salsa su richiesta</p>
+                    <img src="../img/Kebab-Focaccia.jpg" />
+                  </div>
+                </div>
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
+                  <div>
+                    <img src="../img/Kebab-Focaccia.jpg" />
+                    <h3>kebab focaccia6</h3>
+                    <p>insalata, pomodori, carote, salsa su richiesta</p>
+                  </div>
+                </div>
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
+                  <div>
+                    <h3>kebab focaccia7</h3>
+                    <p>insalata, pomodori, carote, salsa su richiesta</p>
+                    <img src="../img/Kebab-Focaccia.jpg" />
+                  </div>
+                </div>
+                <div class="carousel-item col-12 col-sm-4 col-md-4 col-lg-4 menus__part">
+                  <div>
+                    <img src="../img/Kebab-Focaccia.jpg" />
+                    <h3>kebab focaccia8</h3>
+                    <p>insalata, pomodori, carote, salsa su richiesta</p>
+                  </div>
+                </div>
+              </div>
+        			<a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+						    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+					    </a>
+					    <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+						    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+					    </a>
+        		</div>
+        	</div>
+        </div>
+
+      </div>
+      <section class="contact"><!--               section-three               -->
+        <div class="contact__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.837188353819!2d9.01394011558205!3d46.193798479116346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47844a49838882c9%3A0x56b771a867ae6460!2sMoogi%20Kebab%20Pizza!5e0!3m2!1sde!2sch!4v1575486055624!5m2!1sde!2sch" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        <div class="contact__info">
+          <h2>About us</h2>
+          <p>Moogi pizza kebab </br>Via Murate 5</br>Bellinzona 6500</br>Tel.091 825 05 05</br>Tel.078 934 14 42</br> info@moogikebab.ch</p>
+          <p>age eshghet keshid ke maro to <a href="#">facebook</a> ham donbal kon</p>
+          <p>age eshghet keshid ke maro to <a href="#">instagram</a> ham donbal kon</p>
+        </div>
+      </section><!--               end of section-three               -->
+
+    </main><!--        END OF MAIN           -->
+    <footer>
+        <div class="center footer__wrapper">
+          <div class="footer__agencies">
+            <div class="footer__agencies--info">
+              <h4>Moogi take away</h4>
+              <p>Via Canceliere Molo 3</p>
+              <p>Bellinzona 6500</p>
+              <p>Tel.078 934 14 42</p>
+            </div>
+            <div class="footer__agencies--maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d690.4598442645296!2d9.024296229257262!3d46.19375492703674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47844a33e35bc5d9%3A0xb4d31bc680826b02!2sVia%20cancelliere%20Molo%203A%2C%206500%20Bellinzona!5e0!3m2!1sde!2sch!4v1592917601441!5m2!1sde!2sch" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+          </div>
+          <div class="footer__agencies">
+            <div class="footer__agencies--info">
+              <h4>Moogi take away</h4>
+              <p>Via Camoghè 1</p>
+              <p> Lugano 6900</p>
+              <p>Tel.078 934 14 42</p>
+            </div>
+            <div class="footer__agencies--maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2770.9605501321084!2d8.954986915780445!3d46.011979704745016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478432759c63cc05%3A0x8279a689ee3e9294!2sVia%20Camogh%C3%A8%201%2C%206900%20Lugano!5e0!3m2!1sde!2sch!4v1592917683489!5m2!1sde!2sch" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </div>
+<!--        <div class="footer__social">
+          <h4>Social</h4>
+          <a href="#"><i class="fa fa-facebook-square fa-4x fb" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-instagram fa-4x" aria-hidden="true"></i></a>
+        </div> -->
+        <div class="footer__link">
+            <p>COPYRIGHT Ⓒ 2020 All rights are reserved - Design & Developed by<a href="https://www.linkedin.com/in/kazam-zahedi/"> Kazam</a> </p>
+        </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
