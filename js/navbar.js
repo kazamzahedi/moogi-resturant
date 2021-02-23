@@ -1,6 +1,9 @@
 const nav = document.querySelector("#nav");
 const menu = document.querySelector("#menu");
 const menuToggle = document.querySelector(".nav__toggle");
+const heightMenu = document.querySelector(".header");
+const titleHide = document.querySelector(".header--title");
+const pageWidth = document.querySelector(".header__wrapper");
 let isMenuOpen = false;
 // screen width bigger than 666px
 window.onload = function () {
@@ -13,7 +16,7 @@ window.onload = function () {
     menuToggle.setAttribute("aria-expanded", String(isMenuOpen));
     menu.hidden = !isMenuOpen;
     nav.classList.toggle("nav--open");
-    
+    pageWidth.style.position = "relative";
 
   }
 }
@@ -26,6 +29,8 @@ menuToggle.addEventListener("click", (e) => {
   menuToggle.setAttribute("aria-expanded", String(isMenuOpen));
   menu.hidden = !isMenuOpen;
   nav.classList.toggle("nav--open");
+  heightMenu.classList.toggle("headerMenu");
+  titleHide.classList.toggle("hidden");
 });
 
 

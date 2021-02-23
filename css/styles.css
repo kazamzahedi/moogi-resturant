@@ -14,9 +14,8 @@ header, main, footer {
 #block {
   display: none; }
 
-.hover {
-  /* border-bottom: 2px solid $blue; */
-  color: #2962ff !important; }
+.hidden {
+  display: none; }
 
 :root {
   --screen-width:     320px;
@@ -31,6 +30,7 @@ header, main, footer {
   background-size: cover;
   min-height: 390px;
   background-position: center;
+  overflow: hidden;
   /*  &__menu {
     grid-column: 1/13;
     grid-row: 2/3;
@@ -263,6 +263,10 @@ header, main, footer {
 
 #header__menu {
   display: none; }
+
+.headerMenu {
+  position: relative;
+  height: 800px; }
 
 /*------------------SINGEL PAGE--------------HEADER---------*/
 .header--title {
@@ -512,6 +516,9 @@ footer {
 
 /*--------------------------media screen tablet------------------------------*/
 @media (min-width: 768px) {
+  .hover {
+    /* border-bottom: 2px solid $blue; */
+    color: #2962ff !important; }
   #header__menu {
     display: block; }
   header, main, footer {

@@ -24,7 +24,6 @@ h1, h2, h3, h4, h5, h6 {
 p, span, a, li, input, label{
   font-family: 'Arsenal', sans-serif;
 }
-body {}
 
 header, main, footer {
   padding: 0 10px;
@@ -32,9 +31,9 @@ header, main, footer {
 #block {
   display: none ;
 }
-.hover {
-  /* border-bottom: 2px solid $blue; */
-  color: $blue !important;
+
+.hidden {
+  display: none;
 }
 // ---------------------------
 // Vars & Helper Functions
@@ -61,6 +60,7 @@ header, main, footer {
   background-size: cover;
   min-height: 390px;
   background-position: center;
+  overflow:hidden;
   &__wrapper{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -296,6 +296,10 @@ header, main, footer {
 }
 #header__menu {
   display: none;
+}
+.headerMenu {
+  position: relative;
+  height: 800px;
 }
 
 /*------------------SINGEL PAGE--------------HEADER---------*/
@@ -617,6 +621,10 @@ $footer: #f7f7f7;
 }
 /*--------------------------media screen tablet------------------------------*/
 @media (min-width:$breakpoint-sm) {
+  .hover {
+    /* border-bottom: 2px solid $blue; */
+    color: $blue !important;
+  } 
   #header__menu {
     display: block;
   }
